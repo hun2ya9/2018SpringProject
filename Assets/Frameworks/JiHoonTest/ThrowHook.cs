@@ -9,17 +9,12 @@ public class ThrowHook : MonoBehaviour
 
     public bool ropeActive;
     GameObject curHook;
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        //if (Input.GetMouseButtonDown(0))
+        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             if (ropeActive == false)
             {
