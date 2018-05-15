@@ -246,6 +246,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 82383034380285128, guid: b377666b3e5ca3d4687994413b640704,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82383034380285128, guid: b377666b3e5ca3d4687994413b640704,
+        type: 2}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b377666b3e5ca3d4687994413b640704, type: 2}
   m_IsPrefabParent: 0
@@ -481,6 +491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playTime: 0
   money: 0
+  openingBGM: {fileID: 0}
 --- !u!4 &1388490733
 Transform:
   m_ObjectHideFlags: 0

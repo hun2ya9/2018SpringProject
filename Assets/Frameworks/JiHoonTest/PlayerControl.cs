@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,12 +27,24 @@ public class PlayerControl : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(-Vector2.right * forceToAdd);
         }
         //if (Input.GetKey(KeyCode.D))
-        if (Input.acceleration.x >0)
+        if (Input.acceleration.x > 0)
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * forceToAdd);
         }
 
         Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
 
+    }
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Item"))
+        {
+            print(col.gameObject.name);
+            var data = ItemTable.GetData(col.gameObject.name);
+            if (data != null)
+            {
+                data.ItemAction(data.runTime);
+            }
+        }
     }
 }
