@@ -8,3 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Frameworks/JiHoonTest/JiHoon.unity
     guid: c4e64c3377d965e42bb97dd1d84bf528
+  - enabled: 1
+    path: Assets/Frameworks/Scene/Opening.unity
+    guid: 7cdf5d04f2a9c774d80f84fc7cc00fd9
+  - enabled: 1
+    path: Assets/Frameworks/Scene/Main.unity
+    guid: 5fea572b506638c41aef631bc54e7b2e
