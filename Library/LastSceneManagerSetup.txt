@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Frameworks/Scene/Opening.unity
+=======
+- path: Assets/Frameworks/Scene/Main.unity
+>>>>>>> 4c99b6762e3f72c8715810846589cab0caa7906b
   isLoaded: 1
   isActive: 1
