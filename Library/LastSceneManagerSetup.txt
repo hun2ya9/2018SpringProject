@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Frameworks/JiHoonTest/JiHoon.unity
+- path: Assets/Frameworks/Scene/Main.unity
   isLoaded: 1
   isActive: 1
