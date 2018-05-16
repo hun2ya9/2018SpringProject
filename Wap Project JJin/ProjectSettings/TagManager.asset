@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Sun
+  - Trees
+  - Far_mountain
+  - mountains
+  - SmallTrees
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: F_M
+    uniqueID: 1326707635
+    locked: 0
+  - name: M
+    uniqueID: 3075255009
+    locked: 0
+  - name: F_T
+    uniqueID: 2922398859
+    locked: 0
+  - name: T
+    uniqueID: 43557553
+    locked: 0
+  - name: Player
+    uniqueID: 155248619
+    locked: 0
