@@ -15,7 +15,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 0}
+    - {fileID: 114772572018231898, guid: f6e5528df9c213e4285bde70e3ba21be, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -47,7 +47,7 @@ MonoBehaviour:
       Data: 3|System.MonoType, mscorlib
     - Name: 
       Entry: 1
-      Data: ItemAction, Assembly-CSharp
+      Data: ItemManager, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 

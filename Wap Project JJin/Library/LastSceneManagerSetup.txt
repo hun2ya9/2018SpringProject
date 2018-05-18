@@ -1,1 +1,4 @@
-sceneSetups: []
+sceneSetups:
+- path: Assets/MakingMaps.unity
+  isLoaded: 1
+  isActive: 1

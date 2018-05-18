@@ -20,17 +20,13 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    AudioSource bgm;
-    AudioSource efx;
+    [Header("Audio")]
+    public AudioSource bgm;
+    public AudioSource efx;
 
     public void PlayerSingle(AudioClip clip)
     {
         bgm.clip = clip;
         bgm.Play();
-    }
-    // Use this for initialization
-    void Start()
-    {
-        
     }
 }
