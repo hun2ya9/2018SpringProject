@@ -20,6 +20,7 @@ public class RopeScript : MonoBehaviour
     private int vertexCount = 2;
     public List<GameObject> Nodes = new List<GameObject>();
     private bool done = false;
+    private bool isCollisionRope = false;
 
     void Start()
     {
@@ -56,14 +57,29 @@ public class RopeScript : MonoBehaviour
         }
 
         RenderLine();
+        Invoke("CheckCol", speed);
+    }
+    private void CheckCol()
+    {
+        // 발사는 했는데 충돌 x
+        if (!isCollisionRope)
+        {
+            throwHook.CancelRope();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
+        // 충돌체 없거나 로프를 붙일 수 없는 장애물에 쏜 경우
         if (!col.gameObject.CompareTag("RopeAble"))
         {
-            //print("로프가 닿을 수 없는 곳");
-            //throwHook.CancelRope();
+            isCollisionRope = false;
+        }
+        else
+        {
+            isCollisionRope = true;
+            // 충돌시 Hook가 충돌지점에 멈추도록
+            destiny = transform.position;
         }
     }
 

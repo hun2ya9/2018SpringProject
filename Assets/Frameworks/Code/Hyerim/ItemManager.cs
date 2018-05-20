@@ -3,8 +3,19 @@ using System.Collections;
 
 public class ItemManager : MonoBehaviour
 {
+    public static ItemManager instance = new ItemManager();
+
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+            Destroy(gameObject);
+        }
         DontDestroyOnLoad(this);
     }
 

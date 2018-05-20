@@ -8,6 +8,8 @@ public class Throwhook : MonoBehaviour
     public GameObject hook;
     public bool ropeActive;
     private GameObject curHook;
+    [Range(0, 1)]
+    public float cancelRopeTime;  
 
     // Update is called once per frame
     void Update()
@@ -35,6 +37,10 @@ public class Throwhook : MonoBehaviour
 
     // 로프가 지형이 아닌곳에 던져진 경우 바로 지워지도록
     public void CancelRope()
+    {
+        Invoke("InvokeCancelRope", cancelRopeTime);
+    }
+    private void InvokeCancelRope()
     {
         if (curHook != null)
         {

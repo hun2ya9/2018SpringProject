@@ -15,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - NodeCollider
-  - 
+  - Rope
+  - Player
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
   - name: T
     uniqueID: 3326908997
     locked: 0
-  - name: Player
+  - name: Rope
     uniqueID: 3414089739
+    locked: 0
+  - name: Player
+    uniqueID: 2795614485
     locked: 0
