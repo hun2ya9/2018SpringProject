@@ -15,7 +15,6 @@ public class RopeScript : MonoBehaviour
     public GameObject player;
     public GameObject lastNode;
     public LineRenderer lr;
-    private Throwhook throwHook;
 
     private int vertexCount = 2;
     public List<GameObject> Nodes = new List<GameObject>();
@@ -27,7 +26,6 @@ public class RopeScript : MonoBehaviour
 
         lr = GetComponent<LineRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
-        throwHook = player.GetComponent<Throwhook>();
         lastNode = transform.gameObject;
 
         Nodes.Add(transform.gameObject);
@@ -64,7 +62,7 @@ public class RopeScript : MonoBehaviour
         // 발사는 했는데 충돌 x
         if (!isCollisionRope)
         {
-            throwHook.CancelRope();
+            Throwhook.RopeCancle();
         }
     }
 

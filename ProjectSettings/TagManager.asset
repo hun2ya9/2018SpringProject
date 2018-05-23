@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Item
   - RopeAble
+  - Enemy
   layers:
   - Default
   - TransparentFX
