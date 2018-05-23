@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item
+  - RopeAble
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - NodeCollider
-  - 
+  - Rope
+  - Player
   - 
   - 
   - 
@@ -41,4 +42,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: F_M
+    uniqueID: 1283045831
+    locked: 0
+  - name: M
+    uniqueID: 539556185
+    locked: 0
+  - name: F_T
+    uniqueID: 351821165
+    locked: 0
+  - name: T
+    uniqueID: 3326908997
+    locked: 0
+  - name: Rope
+    uniqueID: 3414089739
+    locked: 0
+  - name: Player
+    uniqueID: 2795614485
     locked: 0

@@ -16,22 +16,24 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(this);
+            Destroy(gameObject);
         }
         DontDestroyOnLoad(this);
     }
 
+    [Header("Values")]
     public float playTime;
     public int money;
 
+    [Space]
+    [Header("Audio")]
     public AudioClip openingBGM;
 
-    // Use this for initialization
     void Start()
     {
         AudioManager.instance.PlayerSingle(openingBGM);
     }
 
-    // Update is called once per frame
     void Update()
     {
         RunTime();
@@ -46,12 +48,7 @@ public class GameManager : MonoBehaviour
     {
 
     }
-
-    public void SettingWindow()
-    {
-
-    }
-
+    
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
