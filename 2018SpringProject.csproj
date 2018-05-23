@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -310,18 +308,19 @@
   <ItemGroup>
     <Compile Include="Assets\Frameworks\Code\Custom\SingletonScriptableObject\SingletonScriptableObject.cs" />
     <Compile Include="Assets\Frameworks\Code\Effect\GetItemEffect.cs" />
+    <Compile Include="Assets\Frameworks\Code\Effect\InvertEffect.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\AudioManager.cs" />
-    <Compile Include="Assets\Frameworks\Code\UI\AudioVolumeContol.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\GameManager.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\ItemManager.cs" />
-    <Compile Include="Assets\Frameworks\Code\UI\SettingWindow.cs" />
-    <Compile Include="Assets\Frameworks\Code\Effect\InvertEffect.cs" />
+    <Compile Include="Assets\Frameworks\Code\JungJin\AlphabetMove.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\Move.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\PlayerControl.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\RopeScript.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\Throwhook.cs" />
     <Compile Include="Assets\Frameworks\Code\Table\ItemTable.cs" />
     <Compile Include="Assets\Frameworks\Code\Table\PlayerStateTable.cs" />
+    <Compile Include="Assets\Frameworks\Code\UI\AudioVolumeContol.cs" />
+    <Compile Include="Assets\Frameworks\Code\UI\SettingWindow.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -451,7 +450,6 @@
     <None Include="Assets\Import\Sirenix\Assemblies\Sirenix.Utilities.xml" />
     <None Include="Assets\Import\Sirenix\Assemblies\link.xml" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

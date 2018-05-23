@@ -31,12 +31,6 @@ public class GameManager : MonoBehaviour
     [Space]
     [Header("Audio")]
     public AudioClip openingBGM;
-    public AudioClip sound1;
-    public AudioClip sound2;
-
-    [Space]
-    [Header("Particle")]
-    public ParticleSystem getItemParticle;
 
     [Space]
     [Header("Special Effect")]
