@@ -309,6 +309,16 @@ Prefab:
       propertyPath: playTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114981874025604288, guid: bc9f84e960d5ca248a0b52aa8959c147,
+        type: 2}
+      propertyPath: hitEffectTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114981874025604288, guid: bc9f84e960d5ca248a0b52aa8959c147,
+        type: 2}
+      propertyPath: openingBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: 4722a4268ead728419a3a1b4f9c468cd, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc9f84e960d5ca248a0b52aa8959c147, type: 2}
   m_IsPrefabParent: 0

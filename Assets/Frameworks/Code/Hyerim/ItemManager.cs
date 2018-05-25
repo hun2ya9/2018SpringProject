@@ -19,7 +19,7 @@ public class ItemManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    public bool isUsingItem = false;
+  //  public bool isUsingItem = false;
     
     public void BigItem(int runTime)
     {
@@ -32,18 +32,18 @@ public class ItemManager : MonoBehaviour
     {
         // 슬로우 아이템 효과
         Time.timeScale = 0.5f;
+        InvertEffect.OnSlowEffect(runTime);
         Invoke("ResetTime", runTime);
     }
 
     public void FastItem(int runTime)
     {
         Time.timeScale = 2f;
+        InvertEffect.OnFastEffect(runTime);
         Invoke("ResetTime", runTime);
     }
     private void ResetTime()
     {
         Time.timeScale = 1;
     }
-
-
 }

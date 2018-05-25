@@ -7,12 +7,10 @@ public class PlayerControl : MonoBehaviour
 {
     public float forceToAdd;
     
-
     void Start()
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.up * 10;
     }
-
     void Update()
     {
         if (Input.GetKey(KeyCode.A))
@@ -39,12 +37,18 @@ public class PlayerControl : MonoBehaviour
     {
         if (col.CompareTag("Item"))
         {
-            print(col.name);
+            print("아이템 획득");
             var data = ItemTable.GetData(col.name);
             if (data != null)
             {
                 data.ItemAction(data.runTime);
+                GetItemEffect.OnItemEffect();
             }
+        }
+        if (col.CompareTag("Enemy"))
+        {
+            print("적과의 충돌");
+            GameManager.OnHitEffect();
         }
     }
 }

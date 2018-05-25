@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource bgm;
     public AudioSource efx;
 
-    public void PlayerSingle(AudioClip clip)
+    public void PlaySingle(AudioClip clip)
     {
         bgm.clip = clip;
         bgm.Play();
