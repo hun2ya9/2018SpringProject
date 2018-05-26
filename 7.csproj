@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -302,19 +304,13 @@
   <ItemGroup>
     <Compile Include="Assets\Frameworks\Code\Custom\SingletonScriptableObject\SingletonScriptableObject.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\AudioManager.cs" />
-    <Compile Include="Assets\Frameworks\Code\Hyerim\AudioVolumeContol.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\GameManager.cs" />
-    <Compile Include="Assets\Frameworks\Code\Hyerim\ItemManager.cs" />
-    <Compile Include="Assets\Frameworks\Code\Hyerim\SettingWindow.cs" />
-    <Compile Include="Assets\Frameworks\Code\rak\Move.cs" />
-    <Compile Include="Assets\Frameworks\Code\rak\PlayerControl.cs" />
-    <Compile Include="Assets\Frameworks\Code\rak\RopeScript.cs" />
-    <Compile Include="Assets\Frameworks\Code\rak\Throwhook.cs" />
-    <Compile Include="Assets\Frameworks\Code\Table\ItemTable.cs" />
     <Compile Include="Assets\Frameworks\Code\Table\PlayerStateTable.cs" />
+    <Compile Include="Assets\Frameworks\JiHoonTest\PlayerControl.cs" />
+    <Compile Include="Assets\Frameworks\JiHoonTest\Rope.cs" />
+    <Compile Include="Assets\Frameworks\JiHoonTest\ThrowHook.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Frameworks\Resources\Shader\JP_Particle_FlowDistortion.shader" />
     <None Include="Assets\Import\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.xml" />
     <None Include="Assets\Import\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
     <None Include="Assets\Import\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />

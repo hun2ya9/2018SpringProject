@@ -310,7 +310,6 @@
     <Compile Include="Assets\Import\Sirenix\Odin Inspector\Scripts\Editor\OdinGettingStartedWizard.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Frameworks\Resources\Shader\JP_Particle_FlowDistortion.shader" />
     <None Include="Assets\Import\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.xml" />
     <None Include="Assets\Import\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
     <None Include="Assets\Import\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
