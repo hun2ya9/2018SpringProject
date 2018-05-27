@@ -1504,7 +1504,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 758687249}
+      - m_Target: {fileID: 758687248}
         m_MethodName: VolumeSlider
         m_Mode: 1
         m_Arguments:
@@ -2637,9 +2637,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 758687244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5004fe1de677c944f9e9bb235cfe7c0b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d997e76a6b7df141a35a52663c4b46c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider:
+  - {fileID: 498663620}
+  - {fileID: 1123513859}
 --- !u!114 &758687249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2648,7 +2651,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 758687244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf7135932063144cbd952aba403584c, type: 3}
+  m_Script: {fileID: 11500000, guid: 820def05418089d4e8fdfb2b25f23cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &759400371
@@ -4242,7 +4245,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 758687249}
+      - m_Target: {fileID: 758687248}
         m_MethodName: VolumeSlider
         m_Mode: 1
         m_Arguments:
