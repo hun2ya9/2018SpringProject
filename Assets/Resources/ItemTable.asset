@@ -16,7 +16,6 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 114772572018231898, guid: f6e5528df9c213e4285bde70e3ba21be, type: 2}
-    - {fileID: 0}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -88,54 +87,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: ItemEffect
-      Entry: 7
-      Data: 7|System.Action, System.Core
-    - Name: target
-      Entry: 10
-      Data: 1
-    - Name: declaringType
-      Entry: 7
-      Data: 8|System.MonoType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: UnityEngine.ParticleSystem, UnityEngine.ParticleSystemModule
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: methodName
-      Entry: 1
-      Data: Play
-    - Name: delegateType
-      Entry: 7
-      Data: 9|System.MonoType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: System.Action, System.Core
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: signature
-      Entry: 7
-      Data: 10|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 11|ItemData, Assembly-CSharp
+      Data: 7|ItemData, Assembly-CSharp
     - Name: id
       Entry: 1
       Data: Slow
@@ -144,7 +101,7 @@ MonoBehaviour:
       Data: 4
     - Name: ItemAction
       Entry: 7
-      Data: 12|System.Action`1[[System.Int32, mscorlib]], mscorlib
+      Data: 8|System.Action`1[[System.Int32, mscorlib]], mscorlib
     - Name: target
       Entry: 10
       Data: 0
@@ -159,7 +116,7 @@ MonoBehaviour:
       Data: 4
     - Name: signature
       Entry: 7
-      Data: 13|System.Type[], mscorlib
+      Data: 9|System.Type[], mscorlib
     - Name: 
       Entry: 12
       Data: 1
@@ -175,42 +132,12 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: ItemEffect
-      Entry: 7
-      Data: 14|System.Action, System.Core
-    - Name: target
-      Entry: 10
-      Data: 1
-    - Name: declaringType
-      Entry: 9
-      Data: 8
-    - Name: methodName
-      Entry: 1
-      Data: Play
-    - Name: delegateType
-      Entry: 9
-      Data: 9
-    - Name: signature
-      Entry: 7
-      Data: 15|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 16|ItemData, Assembly-CSharp
+      Data: 10|ItemData, Assembly-CSharp
     - Name: id
       Entry: 1
       Data: Fast
@@ -219,7 +146,7 @@ MonoBehaviour:
       Data: 3
     - Name: ItemAction
       Entry: 7
-      Data: 17|System.Action`1[[System.Int32, mscorlib]], mscorlib
+      Data: 11|System.Action`1[[System.Int32, mscorlib]], mscorlib
     - Name: target
       Entry: 10
       Data: 0
@@ -234,43 +161,13 @@ MonoBehaviour:
       Data: 4
     - Name: signature
       Entry: 7
-      Data: 18|System.Type[], mscorlib
+      Data: 12|System.Type[], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 9
       Data: 6
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: ItemEffect
-      Entry: 7
-      Data: 19|System.Action, System.Core
-    - Name: target
-      Entry: 10
-      Data: 1
-    - Name: declaringType
-      Entry: 9
-      Data: 8
-    - Name: methodName
-      Entry: 1
-      Data: Play
-    - Name: delegateType
-      Entry: 9
-      Data: 9
-    - Name: signature
-      Entry: 7
-      Data: 20|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
     - Name: 
       Entry: 13
       Data: 

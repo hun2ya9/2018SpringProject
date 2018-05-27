@@ -7,6 +7,7 @@ TagManager:
   - Item
   - RopeAble
   - Enemy
+  - Coin
   layers:
   - Default
   - TransparentFX

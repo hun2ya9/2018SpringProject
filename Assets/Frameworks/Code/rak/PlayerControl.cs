@@ -35,6 +35,11 @@ public class PlayerControl : MonoBehaviour
     // 충돌 제어
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if(col.CompareTag("Coin"))
+        {
+            print("코인 획득");
+            /*var data*/
+        }
         if (col.CompareTag("Item"))
         {
             print("아이템 획득");
