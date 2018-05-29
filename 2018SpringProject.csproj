@@ -445,6 +445,7 @@
     <None Include="Assets\Import\Sirenix\Assemblies\Sirenix.Utilities.Editor.xml" />
     <None Include="Assets\Import\Sirenix\Assemblies\Sirenix.Utilities.xml" />
     <None Include="Assets\Import\Sirenix\Assemblies\link.xml" />
+    <None Include="Assets\Pixel Font - Tripfive\_README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
