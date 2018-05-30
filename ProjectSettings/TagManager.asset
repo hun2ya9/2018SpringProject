@@ -8,6 +8,7 @@ TagManager:
   - RopeAble
   - Enemy
   - Coin
+  - Fever
   layers:
   - Default
   - TransparentFX
