@@ -306,12 +306,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Frameworks\Code\Custom\IListExtensions.cs" />
     <Compile Include="Assets\Frameworks\Code\Custom\SingletonScriptableObject\SingletonScriptableObject.cs" />
     <Compile Include="Assets\Frameworks\Code\Effect\GetItemEffect.cs" />
     <Compile Include="Assets\Frameworks\Code\Effect\InvertEffect.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\AudioManager.cs" />
+    <Compile Include="Assets\Frameworks\Code\Hyerim\FeverSpawn.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\GameManager.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\ItemManager.cs" />
+    <Compile Include="Assets\Frameworks\Code\Hyerim\ItemSpawn.cs" />
     <Compile Include="Assets\Frameworks\Code\JungJin\AlphabetMove.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\Move.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\PlayerControl.cs" />
@@ -321,7 +324,6 @@
     <Compile Include="Assets\Frameworks\Code\Table\PlayerStateTable.cs" />
     <Compile Include="Assets\Frameworks\Code\UI\AudioVolumeContol.cs" />
     <Compile Include="Assets\Frameworks\Code\UI\SettingWindow.cs" />
-    <Compile Include="Assets\Frameworks\FeverEvent\AlphabetMove.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
