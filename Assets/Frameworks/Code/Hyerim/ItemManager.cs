@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ItemManager : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class ItemManager : MonoBehaviour
     public void BigItem(int runTime)
     {
         // 거대화 아이템 효과
-        print("거대화 아이템 발동");
+        // print("거대화 아이템 발동");
     }
 
     public void SlowItem(int runTime)

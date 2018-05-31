@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using Sirenix.OdinInspector;
 using UnityEngine.PostProcessing;
 using System;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     [Space]
     [Header("Audio")]
-    public AudioClip openingBGM;
+    public AudioClip mainBGM;
 
     [Space]
     [Header("Special Effect")]
@@ -41,11 +42,20 @@ public class GameManager : MonoBehaviour
 
     public static Action OnHitEffect;
 
+    [Space]
+    [Header("Fever")]
+    public List<GameObject> feverObject = new List<GameObject>();
+    public List<Image> feverImage = new List<Image>();
+    public bool[] hasFever;
+    
+
     void Start()
     {
-        AudioManager.instance.PlaySingle(openingBGM);
-        SceneManager.activeSceneChanged += ChangedActiveScene;
+        hasFever = new bool[feverImage.Count];
+        AudioManager.instance.PlaySingle(mainBGM);
+        // SceneManager.activeSceneChanged += ChangedActiveScene;
         OnHitEffect += HitEffect;
+        GameStartSetting();
     }
 
     void Update()
@@ -53,20 +63,21 @@ public class GameManager : MonoBehaviour
         RunGameTime();
     }
 
-    // Main 씬으로 전환하면 호출
-    private void ChangedActiveScene(Scene current, Scene next)
-    {
-        var scene = next.name;
+    //// Main 씬으로 전환하면 호출
+    //private void ChangedActiveScene(Scene current, Scene next)
+    //{
+    //    var scene = next.name;
 
-        if (scene == "Main")
-        {
-            GameStartSetting();
-        }
-    }
+    //    if (scene == "Main")
+    //    {
+    //        GameStartSetting();
+    //    }
+    //}
 
     // Main 씬 전환시 호출
     public void GameStartSetting()
     {
+        print("Main씬 호출");
         postProcessing = Camera.main.GetComponent<PostProcessingBehaviour>();
         vignette = postProcessing.profile.vignette;
     }
@@ -100,4 +111,28 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void FeverCheck(Collider2D col)
+    {
+        var feverList = feverObject;
+        int totalCount = 0;
+        for (int i = 0; i < feverList.Count; i++)
+        {
+            if (col.gameObject.Equals(feverList[i]))
+            {
+                hasFever[i] = true;
+                totalCount++;
+                ChangeAlpha(feverImage[i]);
+            }
+        }
+        if (totalCount == hasFever.Length)
+        {
+            //모든 fever를 먹었을 때
+        }
+
+    }
+
+    public void ChangeAlpha(Image fever)
+    {
+        fever.color = new Color(1, 1, 1);
+    }
 }

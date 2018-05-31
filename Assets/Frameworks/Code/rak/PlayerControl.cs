@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public float forceToAdd;
-    
+
     void Start()
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.up * 10;
@@ -35,9 +35,10 @@ public class PlayerControl : MonoBehaviour
     // 충돌 제어
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.CompareTag("Coin"))
+        if (col.CompareTag("Coin"))
         {
             print("코인 획득");
+            col.gameObject.SetActive(false);
             /*var data*/
         }
         if (col.CompareTag("Item"))
@@ -46,6 +47,7 @@ public class PlayerControl : MonoBehaviour
             var data = ItemTable.GetData(col.name);
             if (data != null)
             {
+                col.gameObject.SetActive(false);
                 data.ItemAction(data.runTime);
                 GetItemEffect.OnItemEffect();
             }
@@ -54,6 +56,12 @@ public class PlayerControl : MonoBehaviour
         {
             print("적과의 충돌");
             GameManager.OnHitEffect();
+        }
+        if (col.CompareTag("Fever"))
+        {
+            print("FEVER");
+            col.gameObject.SetActive(false);
+            GameManager.instance.FeverCheck(col);
         }
     }
 }
