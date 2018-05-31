@@ -8,6 +8,7 @@ TagManager:
   - RopeAble
   - Enemy
   - Coin
+  - Stage2
   layers:
   - Default
   - TransparentFX

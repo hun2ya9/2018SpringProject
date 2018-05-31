@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2018SpringProject", "2018SpringProject.csproj", "{B1AF3F29-DE9F-A90E-3D13-610F0E75E702}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2018SpringProject.Editor", "2018SpringProject.Editor.csproj", "{707EC781-FB2D-C8A1-F22F-F632A9C3C643}"
