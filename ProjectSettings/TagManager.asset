@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Fever
   - Item
+  - Coin
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -42,4 +44,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Farthest BackGround
+    uniqueID: 3871058751
+    locked: 0
+  - name: Far BackGround
+    uniqueID: 2346801199
+    locked: 0
+  - name: Middle BackGround
+    uniqueID: 3283124237
+    locked: 0
+  - name: Near BackGround
+    uniqueID: 3806587013
+    locked: 0
+  - name: Nearest BackGround
+    uniqueID: 2571484253
+    locked: 0
+  - name: DD
+    uniqueID: 2935676073
     locked: 0

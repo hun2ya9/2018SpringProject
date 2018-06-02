@@ -39,7 +39,6 @@ public class PlayerControl : MonoBehaviour
         {
             print("코인 획득");
             col.gameObject.SetActive(false);
-            /*var data*/
         }
         if (col.CompareTag("Item"))
         {
@@ -62,6 +61,13 @@ public class PlayerControl : MonoBehaviour
             print("FEVER");
             col.gameObject.SetActive(false);
             GameManager.instance.FeverCheck(col);
+        }
+
+        if(col.CompareTag("Portal"))
+        {
+            print("포탈 이동");
+            /*코드추가*/
+            
         }
     }
 }
