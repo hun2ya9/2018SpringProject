@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Fever
   - Item
+  - Coin
+  - Enemy
+  - RopeAble
+  - EndMapX
+  - EndMapY
   layers:
   - Default
   - TransparentFX
