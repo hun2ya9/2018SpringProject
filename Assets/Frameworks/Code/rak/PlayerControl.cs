@@ -75,7 +75,6 @@ public class PlayerControl : MonoBehaviour
         {
             print("코인 획득");
             col.gameObject.SetActive(false);
-            /*var data*/
         }
         if (col.CompareTag("Item"))
         {
@@ -99,6 +98,7 @@ public class PlayerControl : MonoBehaviour
             col.gameObject.SetActive(false);
             GameManager.instance.FeverCheck(col);
         }
+<<<<<<< HEAD
         
         if(col.CompareTag("EndMapX"))
         {
@@ -121,6 +121,14 @@ public class PlayerControl : MonoBehaviour
         if (col.CompareTag("EndMapY"))
         {
             endMapCheckerY.BlsEndOfMapY = false;
+=======
+
+        if(col.CompareTag("Portal"))
+        {
+            print("포탈 이동");
+            /*코드추가*/
+            
+>>>>>>> 0663e142b54893247934fa5189fcb17d1946a284
         }
     }
 }

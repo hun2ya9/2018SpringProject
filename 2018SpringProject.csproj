@@ -311,6 +311,7 @@
     <Compile Include="Assets\Frameworks\Code\Hyerim\ItemManager.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\ItemSpawn.cs" />
     <Compile Include="Assets\Frameworks\Code\JungJin\AlphabetMove.cs" />
+    <Compile Include="Assets\Frameworks\Code\JungJin\Portal.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\Move.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\PlayerControl.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\RopeScript.cs" />
