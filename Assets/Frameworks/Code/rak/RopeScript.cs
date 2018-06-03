@@ -25,6 +25,9 @@ public class RopeScript : MonoBehaviour
     {
 
         lr = GetComponent<LineRenderer>();
+        lr.sortingOrder = 0;
+        lr.sortingLayerName = "DD";
+
         player = GameObject.FindGameObjectWithTag("Player");
         lastNode = transform.gameObject;
 
