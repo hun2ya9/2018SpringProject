@@ -21,6 +21,7 @@ public class RopeScript : MonoBehaviour
     private bool done = false;
     private bool isCollisionRope = false;
 
+
     void Start()
     {
 
@@ -29,6 +30,7 @@ public class RopeScript : MonoBehaviour
         lastNode = transform.gameObject;
 
         Nodes.Add(transform.gameObject);
+        lr.sortingLayerName = "Object";
     }
 
     void Update()

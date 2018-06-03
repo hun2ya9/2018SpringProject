@@ -48,3 +48,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Farest
+    uniqueID: 418799611
+    locked: 0
+  - name: Far
+    uniqueID: 3104303271
+    locked: 0
+  - name: Middle
+    uniqueID: 2316249109
+    locked: 0
+  - name: Near
+    uniqueID: 1971419585
+    locked: 0
+  - name: Nearest
+    uniqueID: 1086160807
+    locked: 0
+  - name: Object
+    uniqueID: 3144521481
+    locked: 0
