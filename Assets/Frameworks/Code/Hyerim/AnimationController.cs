@@ -8,6 +8,12 @@ public class AnimationController : MonoBehaviour
     public Animator playerAni;
     public SpriteRenderer render;
     private bool isFlip;
+    public static Action swingAni;
+
+    void Start()
+    {
+        swingAni = Swing;
+    }
 
     [Button(name : "Reset")]
     public void StateReset()
@@ -18,21 +24,27 @@ public class AnimationController : MonoBehaviour
     [Button(name : "LeftMove")]
     public void LeftMove()
     {
-        playerAni.SetBool("isMove", true);
-        if (isFlip)
+        if (!playerAni.GetBool("isSwing"))
         {
-            isFlip = false;
-            render.flipX = isFlip;
+            playerAni.SetBool("isMove", true);
+            if (isFlip)
+            {
+                isFlip = false;
+                render.flipX = isFlip;
+            }
         }
     }
     [Button(name: "RightMove")]
     public void RightMove()
     {
-        playerAni.SetBool("isMove", true);
-        if (!isFlip)
+        if (!playerAni.GetBool("isSwing"))
         {
-            isFlip = true;
-            render.flipX = isFlip;
+            playerAni.SetBool("isMove", true);
+            if (!isFlip)
+            {
+                isFlip = true;
+                render.flipX = isFlip;
+            }
         }
     }
     [Button(name: "Swing")]
@@ -45,10 +57,12 @@ public class AnimationController : MonoBehaviour
     {
         playerAni.SetTrigger("Hit");
     }
-    [Button(name: "Die")]
-    public void Die()
+    public void MovePause()
     {
-        playerAni.SetTrigger("Die");
+        if (!playerAni.GetBool("isSwing"))
+        {
+            playerAni.SetBool("isMove", false);
+            playerAni.SetBool("isSwing", false);
+        }
     }
-
 }

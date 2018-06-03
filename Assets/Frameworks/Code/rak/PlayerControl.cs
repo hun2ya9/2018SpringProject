@@ -20,10 +20,16 @@ public class PlayerControl : MonoBehaviour
     public float forceToAdd;
     EndMapCheckerX endMapCheckerX = new EndMapCheckerX();
     EndMapCheckerY endMapCheckerY = new EndMapCheckerY();
+    public static Action<int> Big;
+    private Rigidbody2D rigidBody;
+    public int hitForce;
+    public AnimationController ani;
 
     void Start()
     {
+        rigidBody = transform.GetComponent<Rigidbody2D>();
         GetComponent<Rigidbody2D>().velocity = Vector2.up * 10;
+        Big += BigItemEffect;
     }
 
     void Update()
@@ -31,14 +37,20 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         //if (Input.acceleration.x < 0)
         {
+            
             GetComponent<Rigidbody2D>().AddForce(-Vector2.right * forceToAdd);
+            ani.LeftMove();
         }
         if (Input.GetKey(KeyCode.D))
         //if (Input.acceleration.x > 0)
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * forceToAdd);
+            ani.RightMove();
         }
-
+        if (rigidBody.velocity == Vector2.zero)
+        {
+            ani.MovePause();
+        }
 
         CameraControl();
     }
@@ -67,6 +79,17 @@ public class PlayerControl : MonoBehaviour
 
 
     }
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Enemy"))
+        {
+            print("적과의 충돌");
+            var vector = transform.position - col.transform.position;
+            rigidBody.AddForce(vector * hitForce);
+            GameManager.OnHitEffect();
+            ani.Hit();
+        }
+    }
 
     // 트리거 제어
     private void OnTriggerEnter2D(Collider2D col)
@@ -87,11 +110,6 @@ public class PlayerControl : MonoBehaviour
                 data.ItemAction(data.runTime);
                 GetItemEffect.OnItemEffect();
             }
-        }
-        if (col.CompareTag("Enemy"))
-        {
-            print("적과의 충돌");
-            GameManager.OnHitEffect();
         }
         if (col.CompareTag("Fever"))
         {
@@ -122,5 +140,16 @@ public class PlayerControl : MonoBehaviour
         {
             endMapCheckerY.BlsEndOfMapY = false;
         }
+    }
+
+    private void BigItemEffect(int runtime)
+    {
+        transform.localScale *= 2;
+        Invoke("ResetTime", runtime);
+    }
+
+    private void ResetBig()
+    {
+        transform.localScale /= 2;
     }
 }

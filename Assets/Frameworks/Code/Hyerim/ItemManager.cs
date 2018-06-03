@@ -10,7 +10,7 @@ public class ItemManager : MonoBehaviour
     {
         if (instance == null)
         {
-            instance = this;
+            instance = new ItemManager();
         }
         else
         {
@@ -26,6 +26,7 @@ public class ItemManager : MonoBehaviour
     {
         // 거대화 아이템 효과
         // print("거대화 아이템 발동");
+        PlayerControl.Big(runTime);
     }
 
     public void SlowItem(int runTime)
@@ -42,6 +43,7 @@ public class ItemManager : MonoBehaviour
         InvertEffect.OnFastEffect(runTime);
         Invoke("ResetTime", runTime);
     }
+
     private void ResetTime()
     {
         Time.timeScale = 1;

@@ -16,6 +16,7 @@ public class Throwhook : MonoBehaviour
 
     // 로프 취소
     public static Action RopeCancle;
+    public AnimationController ani;
 
     private void Start()
     {
@@ -36,11 +37,12 @@ public class Throwhook : MonoBehaviour
                 curHook.GetComponent<RopeScript>().destiny = destiny;
 
                 ropeActive = true;
+                AnimationController.swingAni();
             }
             else
             {
                 Destroy(curHook);
-
+                ani.StateReset();
                 ropeActive = false;
             }
         }

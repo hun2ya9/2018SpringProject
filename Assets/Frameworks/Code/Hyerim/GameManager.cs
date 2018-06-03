@@ -86,8 +86,8 @@ public class GameManager : MonoBehaviour
     {
         print("피격당함");
         vignette.enabled = true;
-        print(vignette.enabled);
         Invoke("HitEffectInvoke", hitEffectTime);
+    
     }
 
     private void HitEffectInvoke()
