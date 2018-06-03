@@ -1,9 +1,33 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=4 insize=1435 outsize=1561 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3273 outsize=1925 ok=1
 Cmd: preprocess
   insize=811 outsize=412 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=1526 outsize=1533 ok=1
 Cmd: preprocess
   insize=4735 outsize=1581 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2343 outsize=1341 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=2343 outsize=1341 ok=1
+Cmd: preprocess
+  insize=1516 outsize=294 ok=1
+Cmd: preprocess
+  insize=1713 outsize=258 ok=1
+Cmd: preprocess
+  insize=1516 outsize=294 ok=1
+Cmd: preprocess
+  insize=1516 outsize=294 ok=1
+Cmd: preprocess
+  insize=1516 outsize=294 ok=1
+Cmd: preprocess
+  insize=1713 outsize=258 ok=1
+Cmd: preprocess
+  insize=1516 outsize=294 ok=1
 Cmd: preprocess
   insize=1516 outsize=294 ok=1
 Cmd: preprocess
@@ -19,64 +43,8 @@ Cmd: preprocess
 Cmd: preprocess
   insize=1516 outsize=294 ok=1
 Cmd: preprocess
-  insize=1713 outsize=258 ok=1
+  insize=1516 outsize=294 ok=1
 Cmd: preprocess
   insize=1516 outsize=294 ok=1
 Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
   insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
-Cmd: preprocess
-  insize=1516 outsize=294 ok=1
-Cmd: preprocess
-  insize=1713 outsize=258 ok=1
