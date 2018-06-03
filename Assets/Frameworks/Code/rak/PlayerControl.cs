@@ -3,14 +3,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class PlayerControl : MonoBehaviour
 {
+    private class EndMapCheckerX
+    {
+        public bool BIsEndOfMapX { set; get; }
+    }
+
+    private class EndMapCheckerY
+    {
+        public bool BlsEndOfMapY { set; get; }
+    }
+
     public float forceToAdd;
+    EndMapCheckerX endMapCheckerX = new EndMapCheckerX();
+    EndMapCheckerY endMapCheckerY = new EndMapCheckerY();
 
     void Start()
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.up * 10;
     }
+
     void Update()
     {
         if (Input.GetKey(KeyCode.A))
@@ -24,21 +39,43 @@ public class PlayerControl : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * forceToAdd);
         }
 
+
         CameraControl();
     }
 
     // 카메라 제어
     private void CameraControl()
     {
-        Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
+        if (endMapCheckerY.BlsEndOfMapY == false && endMapCheckerX.BIsEndOfMapX == false)
+        {
+                Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
+        }
+        else if (endMapCheckerY.BlsEndOfMapY == true || endMapCheckerX.BIsEndOfMapX == true)
+        {
+            if(endMapCheckerY.BlsEndOfMapY == true && endMapCheckerX.BIsEndOfMapX == true)
+            {
+                Camera.main.transform.position = new Vector3(
+                                                    Camera.main.transform.position.x, 
+                                                    Camera.main.transform.position.y, 
+                                                    Camera.main.transform.position.z);
+            }
+            else if (endMapCheckerY.BlsEndOfMapY == true)
+                Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, transform.position.y, Camera.main.transform.position.z);
+            else
+                Camera.main.transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
     }
-    // 충돌 제어
+
+
+    }
+
+    // 트리거 제어
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Coin"))
         {
             print("코인 획득");
             col.gameObject.SetActive(false);
+            /*var data*/
         }
         if (col.CompareTag("Item"))
         {
@@ -62,12 +99,28 @@ public class PlayerControl : MonoBehaviour
             col.gameObject.SetActive(false);
             GameManager.instance.FeverCheck(col);
         }
-
-        if(col.CompareTag("Portal"))
+        
+        if(col.CompareTag("EndMapX"))
         {
-            print("포탈 이동");
-            /*코드추가*/
-            
+            endMapCheckerX.BIsEndOfMapX = true;
+        }
+
+        if (col.CompareTag("EndMapY"))
+        {
+            endMapCheckerY.BlsEndOfMapY = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("EndMapX"))
+        {
+            endMapCheckerX.BIsEndOfMapX = false;
+        }
+
+        if (col.CompareTag("EndMapY"))
+        {
+            endMapCheckerY.BlsEndOfMapY = false;
         }
     }
 }
