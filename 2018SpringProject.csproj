@@ -314,6 +314,7 @@
     <Compile Include="Assets\Frameworks\Code\rak\Move.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\PlayerControl.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\RopeScript.cs" />
+    <Compile Include="Assets\Frameworks\Code\rak\shop.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\Throwhook.cs" />
     <Compile Include="Assets\Frameworks\Code\Table\ItemTable.cs" />
     <Compile Include="Assets\Frameworks\Code\Table\PlayerStateTable.cs" />
@@ -364,6 +365,7 @@
     <Compile Include="Assets\Import\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Import\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Shop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Frameworks\Resources\Shader\InvertColor.shader" />
