@@ -304,10 +304,13 @@
     <Compile Include="Assets\Frameworks\Code\Custom\IListExtensions.cs" />
     <Compile Include="Assets\Frameworks\Code\Custom\SingletonScriptableObject\SingletonScriptableObject.cs" />
     <Compile Include="Assets\Frameworks\Code\Effect\GetItemEffect.cs" />
+    <Compile Include="Assets\Frameworks\Code\Effect\HitEffect.cs" />
     <Compile Include="Assets\Frameworks\Code\Effect\InvertEffect.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\AnimationController.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\AudioManager.cs" />
-    <Compile Include="Assets\Frameworks\Code\Hyerim\FeverSpawn.cs" />
+    <Compile Include="Assets\Frameworks\Code\Hyerim\EnemyAniController.cs" />
+    <Compile Include="Assets\Frameworks\Code\Hyerim\EnemyControl.cs" />
+    <Compile Include="Assets\Frameworks\Code\Hyerim\Fever.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\GameManager.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\ItemManager.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\ItemSpawn.cs" />
