@@ -33,29 +33,15 @@ public class GameManager : MonoBehaviour
     [Header("Audio")]
     public AudioClip mainBGM;
 
-    [Space]
-    [Header("Special Effect")]
-    private PostProcessingBehaviour postProcessing;
-    private VignetteModel vignette;
-    public float hitEffectTime;
-    private Color hitColor = new Color(0,255,255);
-
-    public static Action OnHitEffect;
-
-    [Space]
-    [Header("Fever")]
-    public List<GameObject> feverObject = new List<GameObject>();
-    public List<Image> feverImage = new List<Image>();
-    public bool[] hasFever;
+    public List<GameObject> playerSkin = new List<GameObject>();
     
+    // 플레이어 프리펩 -> 상점에서 구매시 변경됨. 디폴트값으로는 Player_Blue
+    public GameObject playerPrefab;
 
     void Start()
     {
-        hasFever = new bool[feverImage.Count];
-        AudioManager.instance.PlaySingle(mainBGM);
-        // SceneManager.activeSceneChanged += ChangedActiveScene;
-        OnHitEffect += HitEffect;
-        GameStartSetting();
+        SceneManager.activeSceneChanged += ChangedActiveScene;
+        PlayerPrefs.GetInt("Money", money);
     }
 
     void Update()
@@ -63,39 +49,37 @@ public class GameManager : MonoBehaviour
         RunGameTime();
     }
 
+    private int skinNumber;
+    [Button(name: "플레이어 스킨변경")]
+    public void ChangeSkin()
+    {
+        if (skinNumber < playerSkin.Count)
+        {
+            playerPrefab = playerSkin[skinNumber++];
+        }
+        else
+        {
+            skinNumber = 0;
+        }
+    }
+
     //// Main 씬으로 전환하면 호출
-    //private void ChangedActiveScene(Scene current, Scene next)
-    //{
-    //    var scene = next.name;
-
-    //    if (scene == "Main")
-    //    {
-    //        GameStartSetting();
-    //    }
-    //}
-
-    // Main 씬 전환시 호출
-    public void GameStartSetting()
+    private void ChangedActiveScene(Scene current, Scene next)
     {
-        print("Main씬 호출");
-        postProcessing = Camera.main.GetComponent<PostProcessingBehaviour>();
-        vignette = postProcessing.profile.vignette;
-    }
+        var scene = next.name;
 
-    public void HitEffect()
-    {
-        print("피격당함");
-        vignette.enabled = true;
-        Invoke("HitEffectInvoke", hitEffectTime);
-    
+        if (scene == "Main")
+        {
+            AudioManager.instance.PlaySingle(mainBGM);
+            Instantiate(playerPrefab, new Vector3(-6, -4, 0), Quaternion.identity,null);
+        }
+        // 게임 -> 오프닝으로 되돌아가면 컴퓨터에 현재 돈 저장
+        if (scene == "Opening")
+        {
+            print("게임 종료. 현재 돈 저장");
+            PlayerPrefs.SetInt("Money", money);
+        }
     }
-
-    private void HitEffectInvoke()
-    {
-        vignette.enabled = false;
-        Throwhook.RopeCancle();
-    }
-
     private void RunGameTime()
     {
         playTime += Time.deltaTime;
@@ -109,30 +93,5 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-    }
-
-    public void FeverCheck(Collider2D col)
-    {
-        var feverList = feverObject;
-        int totalCount = 0;
-        for (int i = 0; i < feverList.Count; i++)
-        {
-            if (col.gameObject.Equals(feverList[i]))
-            {
-                hasFever[i] = true;
-                totalCount++;
-                ChangeAlpha(feverImage[i]);
-            }
-        }
-        if (totalCount == hasFever.Length)
-        {
-            //모든 fever를 먹었을 때
-        }
-
-    }
-
-    public void ChangeAlpha(Image fever)
-    {
-        fever.color = new Color(1, 1, 1);
     }
 }
