@@ -32,7 +32,7 @@ MonoBehaviour:
       Data: 1|ItemData, Assembly-CSharp
     - Name: id
       Entry: 1
-      Data: Big
+      Data: Big(Clone)
     - Name: runTime
       Entry: 3
       Data: 5
@@ -95,7 +95,7 @@ MonoBehaviour:
       Data: 7|ItemData, Assembly-CSharp
     - Name: id
       Entry: 1
-      Data: Slow
+      Data: Slow(Clone)
     - Name: runTime
       Entry: 3
       Data: 4
@@ -140,7 +140,7 @@ MonoBehaviour:
       Data: 10|ItemData, Assembly-CSharp
     - Name: id
       Entry: 1
-      Data: Fast
+      Data: Fast(Clone)
     - Name: runTime
       Entry: 3
       Data: 3

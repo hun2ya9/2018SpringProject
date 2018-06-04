@@ -17,13 +17,24 @@ public class PlayerControl : MonoBehaviour
         public bool BlsEndOfMapY { set; get; }
     }
 
-    public float forceToAdd;
     EndMapCheckerX endMapCheckerX = new EndMapCheckerX();
     EndMapCheckerY endMapCheckerY = new EndMapCheckerY();
 
+    private Rigidbody2D rigidBody;
+
+    [Header("Value")]
+    public float forceToAdd;
+    public int hitForce;
+    [Space]
+    public AnimationController ani;
+
+    public static Action<int> Big;
+
     void Start()
     {
+        rigidBody = transform.GetComponent<Rigidbody2D>();
         GetComponent<Rigidbody2D>().velocity = Vector2.up * 10;
+        Big += BigItemEffect;
     }
 
     void Update()
@@ -31,14 +42,20 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         //if (Input.acceleration.x < 0)
         {
+            
             GetComponent<Rigidbody2D>().AddForce(-Vector2.right * forceToAdd);
+            ani.LeftMove();
         }
         if (Input.GetKey(KeyCode.D))
         //if (Input.acceleration.x > 0)
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * forceToAdd);
+            ani.RightMove();
         }
-
+        if (rigidBody.velocity == Vector2.zero)
+        {
+            ani.MovePause();
+        }
 
         CameraControl();
     }
@@ -67,6 +84,17 @@ public class PlayerControl : MonoBehaviour
 
 
     }
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Enemy"))
+        {
+            print("적과의 충돌");
+            var vector = transform.position - col.transform.position;
+            rigidBody.AddForce(vector * hitForce);
+            HitEffect.OnHitEffect();
+            ani.Hit();
+        }
+    }
 
     // 트리거 제어
     private void OnTriggerEnter2D(Collider2D col)
@@ -88,16 +116,11 @@ public class PlayerControl : MonoBehaviour
                 GetItemEffect.OnItemEffect();
             }
         }
-        if (col.CompareTag("Enemy"))
-        {
-            print("적과의 충돌");
-            GameManager.OnHitEffect();
-        }
         if (col.CompareTag("Fever"))
         {
             print("FEVER");
             col.gameObject.SetActive(false);
-            GameManager.instance.FeverCheck(col);
+            Fever.OnHitFever(col);
         }
         
         if(col.CompareTag("EndMapX"))
@@ -122,5 +145,16 @@ public class PlayerControl : MonoBehaviour
         {
             endMapCheckerY.BlsEndOfMapY = false;
         }
+    }
+
+    private void BigItemEffect(int runTime)
+    {
+        transform.localScale *= 2;
+        Invoke("ResetBig", runTime);
+    }
+
+    private void ResetBig()
+    {
+        transform.localScale /= 2;
     }
 }
