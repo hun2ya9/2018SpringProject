@@ -17,13 +17,17 @@ public class PlayerControl : MonoBehaviour
         public bool BlsEndOfMapY { set; get; }
     }
 
-    public float forceToAdd;
     EndMapCheckerX endMapCheckerX = new EndMapCheckerX();
     EndMapCheckerY endMapCheckerY = new EndMapCheckerY();
-    public static Action<int> Big;
+
     private Rigidbody2D rigidBody;
+
+    [Header("Value")]
+    public float forceToAdd;
     public int hitForce;
     public PlayerAniController ani;
+
+    public static Action<int> Big;
 
     void Start()
     {
@@ -86,7 +90,7 @@ public class PlayerControl : MonoBehaviour
             print("적과의 충돌");
             var vector = transform.position - col.transform.position;
             rigidBody.AddForce(vector * hitForce);
-            GameManager.OnHitEffect();
+            HitEffect.OnHitEffect();
             ani.Hit();
         }
     }
@@ -115,7 +119,7 @@ public class PlayerControl : MonoBehaviour
         {
             print("FEVER");
             col.gameObject.SetActive(false);
-            GameManager.instance.FeverCheck(col);
+            Fever.OnHitFever(col);
         }
         
         if(col.CompareTag("EndMapX"))
@@ -142,10 +146,10 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    private void BigItemEffect(int runtime)
+    private void BigItemEffect(int runTime)
     {
         transform.localScale *= 2;
-        Invoke("ResetTime", runtime);
+        Invoke("ResetBig", runTime);
     }
 
     private void ResetBig()

@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Throwhook : MonoBehaviour
 {
-    [Header("Hook")]
     public GameObject hook;
     public bool ropeActive;
     private GameObject curHook;
