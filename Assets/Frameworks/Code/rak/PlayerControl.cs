@@ -41,7 +41,6 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         //if (Input.acceleration.x < 0)
         {
-            
             GetComponent<Rigidbody2D>().AddForce(-Vector2.right * forceToAdd);
             ani.LeftMove();
         }

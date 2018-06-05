@@ -11,7 +11,7 @@ public class PlantAttackControl : MonoBehaviour
         if(col.CompareTag("Player"))
         {
             ani.SetBool("isAttack", true);
-            ballAni.SetTrigger("Shot");
+            ballAni.SetBool("isShot",transform);
         }
     }
 
@@ -20,6 +20,7 @@ public class PlantAttackControl : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             ani.SetBool("isAttack", false);
+            ballAni.SetBool("isShot",false);
         }
     }
 }

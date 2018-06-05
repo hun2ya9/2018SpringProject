@@ -12,6 +12,7 @@ TagManager:
   - EndMapX
   - EndMapY
   - MovingLimit
+  - Bird
   layers:
   - Default
   - TransparentFX

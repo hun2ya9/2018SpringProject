@@ -5,16 +5,11 @@ public class CuteControl : MonoBehaviour
 {
     public CuteAniController ani;
     public float movePower = 1f;
-    private Vector2 startPos;
     public int distance;
     public int moveSpeed;
     public SpriteRenderer render;
     private bool isFlip = false;
-    void Start()
-    {
-        startPos = transform.position;
-    }
-
+    
     void Update()
     {
         Move();
