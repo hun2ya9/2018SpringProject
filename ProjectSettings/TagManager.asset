@@ -11,6 +11,7 @@ TagManager:
   - RopeAble
   - EndMapX
   - EndMapY
+  - MovingLimit
   layers:
   - Default
   - TransparentFX

@@ -23,7 +23,7 @@ public class PlayerControl : MonoBehaviour
     public static Action<int> Big;
     private Rigidbody2D rigidBody;
     public int hitForce;
-    public AnimationController ani;
+    public PlayerAniController ani;
 
     void Start()
     {
