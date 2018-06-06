@@ -315,6 +315,8 @@
     <Compile Include="Assets\Frameworks\Code\Hyerim\ItemManager.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\ItemSpawn.cs" />
     <Compile Include="Assets\Frameworks\Code\JungJin\AlphabetMove.cs" />
+    <Compile Include="Assets\Frameworks\Code\JungJin\NewBehaviourScript1.cs" />
+    <Compile Include="Assets\Frameworks\Code\JungJin\StageShow.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\Move.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\PlayerControl.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\RopeScript.cs" />
@@ -369,7 +371,10 @@
     <Compile Include="Assets\Import\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Import\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\qwe.cs" />
+    <Compile Include="Assets\Sc.cs" />
     <Compile Include="Assets\Shop.cs" />
+    <Compile Include="Assets\StageChanger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Frameworks\Resources\Shader\InvertColor.shader" />
