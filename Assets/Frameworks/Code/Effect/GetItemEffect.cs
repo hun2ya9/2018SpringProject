@@ -8,8 +8,17 @@ public class GetItemEffect : MonoBehaviour
     public ParticleSystem getItemParticle;
     public static Action OnItemEffect;
 
-    private void Awake()
+    private void Start()
     {
+        var player = GameManager.instance.currentPlayer;
+        if (player != null)
+        {
+            playerPosition = GameManager.instance.currentPlayer.transform;
+        }
+        else
+        {
+            Debug.Log("플레이어를 찾지 못함");
+        }
         OnItemEffect += ItemEffect;
     }
     private void ItemEffect()

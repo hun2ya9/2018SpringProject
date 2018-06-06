@@ -25,25 +25,37 @@ public class Throwhook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+
+    #if UNITY_STANDALONE
         if (Input.GetMouseButtonDown(0))
         {
-            if (ropeActive == false && !isBlockedRope)
-            {
-                Vector2 destiny = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Throw();
+        }
+    #endif
+    #if (UNITY_ANDROID || UNITY_IOS)
+        if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            Throw();
+        }
+    #endif
+    }
+    private void Throw()
+    {
+        if (ropeActive == false && !isBlockedRope)
+        {
+            Vector2 destiny = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-                curHook = Instantiate(hook, transform.position, Quaternion.identity);
-                curHook.GetComponent<RopeScript>().destiny = destiny;
+            curHook = Instantiate(hook, transform.position, Quaternion.identity);
+            curHook.GetComponent<RopeScript>().destiny = destiny;
 
-                ropeActive = true;
-                PlayerAniController.swingAni();
-            }
-            else
-            {
-                Destroy(curHook);
-                ani.StateReset();
-                ropeActive = false;
-            }
+            ropeActive = true;
+            PlayerAniController.swingAni();
+        }
+        else
+        {
+            Destroy(curHook);
+            ani.StateReset();
+            ropeActive = false;
         }
     }
 

@@ -4,7 +4,7 @@ using System.Collections;
 public class CuteControl : MonoBehaviour
 {
     public CuteAniController ani;
-    public float movePower = 1f;
+    public float movePower;
     public int distance;
     public int moveSpeed;
     public SpriteRenderer render;
@@ -17,7 +17,7 @@ public class CuteControl : MonoBehaviour
 
     private void Move()
     {
-        var xForce = (transform.position.x + moveSpeed) * Time.deltaTime;
+        var xForce = moveSpeed * Time.deltaTime;
         if (!isFlip)
             xForce = -xForce;
         transform.Translate(new Vector3(xForce, 0, 0));

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Frameworks/Scene/HTest.unity
+- path: Assets/TestJB/SHOP.unity
   isLoaded: 1
   isActive: 1

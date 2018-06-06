@@ -15,6 +15,8 @@ public class InvertEffect : MonoBehaviour
     private void Awake()
     {
         invertValue = invertMaterial.GetFloat("_Threshold");
+        // 항상 어떻게 되든 inverValue는 0으로 시작하게끔 (100%가 아닌 임시적인 해결책일 뿐임)
+        invertValue = 0;
         OnSlowEffect += SlowEffect;
         OnFastEffect += FastEffect;
     }

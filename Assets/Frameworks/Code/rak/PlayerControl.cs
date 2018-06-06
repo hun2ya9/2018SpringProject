@@ -38,23 +38,38 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
+       #if  UNITY_STANDALONE
         if (Input.GetKey(KeyCode.A))
-        //if (Input.acceleration.x < 0)
         {
+            
             GetComponent<Rigidbody2D>().AddForce(-Vector2.right * forceToAdd);
             ani.LeftMove();
         }
         if (Input.GetKey(KeyCode.D))
-        //if (Input.acceleration.x > 0)
         {
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * forceToAdd);
             ani.RightMove();
         }
+        #endif
+
+        #if (UNITY_IOS || UNITY_ANDROID)
+        if (Input.acceleration.x < 0)
+        {
+
+            GetComponent<Rigidbody2D>().AddForce(-Vector2.right * forceToAdd);
+            ani.LeftMove();
+        }
+        if (Input.acceleration.x > 0)
+        {
+            GetComponent<Rigidbody2D>().AddForce(Vector2.right * forceToAdd);
+            ani.RightMove();
+        }
+        #endif
+
         if (rigidBody.velocity == Vector2.zero)
         {
             ani.MovePause();
         }
-
         CameraControl();
     }
 

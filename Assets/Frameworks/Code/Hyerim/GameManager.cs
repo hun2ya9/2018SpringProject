@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
     // 플레이어 프리펩 -> 상점에서 구매시 변경됨. 디폴트값으로는 Player_Blue
     public GameObject playerPrefab;
 
+    // 현재 플레이 중인 플레이어
+    public GameObject currentPlayer;
+
     void Start()
     {
         SceneManager.activeSceneChanged += ChangedActiveScene;
@@ -71,7 +74,7 @@ public class GameManager : MonoBehaviour
         if (scene == "Main")
         {
             AudioManager.instance.PlaySingle(mainBGM);
-            Instantiate(playerPrefab, new Vector3(-6, -4, 0), Quaternion.identity,null);
+            currentPlayer = Instantiate(playerPrefab, new Vector3(-6, -4, 0), Quaternion.identity,null);
         }
         // 게임 -> 오프닝으로 되돌아가면 컴퓨터에 현재 돈 저장
         if (scene == "Opening")
