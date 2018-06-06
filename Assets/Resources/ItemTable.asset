@@ -14,8 +14,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 114772572018231898, guid: f6e5528df9c213e4285bde70e3ba21be, type: 2}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -37,62 +36,14 @@ MonoBehaviour:
       Entry: 3
       Data: 5
     - Name: ItemAction
-      Entry: 7
-      Data: 2|System.Action`1[[System.Int32, mscorlib]], mscorlib
-    - Name: target
-      Entry: 10
-      Data: 0
-    - Name: declaringType
-      Entry: 7
-      Data: 3|System.MonoType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: ItemManager, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: methodName
-      Entry: 1
-      Data: BigItem
-    - Name: delegateType
-      Entry: 7
-      Data: 4|System.MonoType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: System.Action`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: signature
-      Entry: 7
-      Data: 5|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 6|System.MonoType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: System.Int32, mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 7|ItemData, Assembly-CSharp
+      Data: 2|ItemData, Assembly-CSharp
     - Name: id
       Entry: 1
       Data: Slow(Clone)
@@ -100,44 +51,14 @@ MonoBehaviour:
       Entry: 3
       Data: 4
     - Name: ItemAction
-      Entry: 7
-      Data: 8|System.Action`1[[System.Int32, mscorlib]], mscorlib
-    - Name: target
-      Entry: 10
-      Data: 0
-    - Name: declaringType
-      Entry: 9
-      Data: 3
-    - Name: methodName
-      Entry: 1
-      Data: SlowItem
-    - Name: delegateType
-      Entry: 9
-      Data: 4
-    - Name: signature
-      Entry: 7
-      Data: 9|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 9
-      Data: 6
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 10|ItemData, Assembly-CSharp
+      Data: 3|ItemData, Assembly-CSharp
     - Name: id
       Entry: 1
       Data: Fast(Clone)
@@ -145,37 +66,7 @@ MonoBehaviour:
       Entry: 3
       Data: 3
     - Name: ItemAction
-      Entry: 7
-      Data: 11|System.Action`1[[System.Int32, mscorlib]], mscorlib
-    - Name: target
-      Entry: 10
-      Data: 0
-    - Name: declaringType
-      Entry: 9
-      Data: 3
-    - Name: methodName
-      Entry: 1
-      Data: FastItem
-    - Name: delegateType
-      Entry: 9
-      Data: 4
-    - Name: signature
-      Entry: 7
-      Data: 12|System.Type[], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 9
-      Data: 6
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
