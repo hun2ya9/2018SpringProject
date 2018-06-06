@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Frameworks/Scene/Main.unity
-=======
-- path: Assets/TestJB/SHOP.unity
->>>>>>> 86478acfa627cb2bd8e2ea4cc64701e4916f530d
   isLoaded: 1
   isActive: 1
