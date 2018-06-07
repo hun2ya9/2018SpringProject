@@ -18,13 +18,8 @@ public class ItemManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(this);
-    }
-
-    private void Start()
-    {
         ItemSetting();
     }
-
     private void ItemSetting()
     {
         var ids = ItemTable.GetIds();
