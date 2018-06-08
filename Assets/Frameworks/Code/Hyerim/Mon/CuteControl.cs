@@ -28,7 +28,7 @@ public class CuteControl : MonoBehaviour
         if (col.CompareTag("MovingLimit"))
         {
             isFlip = isFlip == true ? false : true;
-            render.flipX = isFlip;
+            render.flipX = !isFlip;
         }
     }
 }
