@@ -314,6 +314,7 @@
     <Compile Include="Assets\Frameworks\Code\Effect\HitEffect.cs" />
     <Compile Include="Assets\Frameworks\Code\Effect\InvertEffect.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\AudioManager.cs" />
+    <Compile Include="Assets\Frameworks\Code\Hyerim\Coin.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\Fever.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\GameManager.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\ItemManager.cs" />
@@ -322,9 +323,13 @@
     <Compile Include="Assets\Frameworks\Code\Hyerim\Mon\CuteAttackControl.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\Mon\CuteControl.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\Mon\PlantAttackControl.cs" />
-    <Compile Include="Assets\Frameworks\Code\Hyerim\PlayerAniController.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\Mon\WhiteBirdControl.cs" />
-    <Compile Include="Assets\Frameworks\Code\JungJin\AlphabetMove.cs" />
+    <Compile Include="Assets\Frameworks\Code\Hyerim\PlayerAniController.cs" />
+    <Compile Include="Assets\Frameworks\Code\Hyerim\SpikeControl.cs" />
+    <Compile Include="Assets\Frameworks\Code\JungJin\FeverEvent.cs" />
+    <Compile Include="Assets\Frameworks\Code\JungJin\NewBehaviourScript1.cs" />
+    <Compile Include="Assets\Frameworks\Code\JungJin\Portal.cs" />
+    <Compile Include="Assets\Frameworks\Code\JungJin\StageShow.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\Move.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\PlayerControl.cs" />
     <Compile Include="Assets\Frameworks\Code\rak\RopeScript.cs" />
@@ -379,7 +384,10 @@
     <Compile Include="Assets\Import\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Import\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\qwe.cs" />
+    <Compile Include="Assets\Sc.cs" />
     <Compile Include="Assets\Shop.cs" />
+    <Compile Include="Assets\StageChanger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Frameworks\Resources\Shader\InvertColor.shader" />

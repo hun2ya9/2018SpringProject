@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Frameworks/Resources/Sprite/BackGround/ColdMountain.meta
+guid: 124192a3c7e745848b42aeb43371d770
+folderAsset: yes
+timeCreated: 1528435119
+=======
+guid: a05d16a929ee1e24d972277857c97935
+timeCreated: 1528439053
+>>>>>>> b0b96dd1fd3cf1cb4e7198f4c2ce9e954c352fe2:Assets/Frameworks/Prefab/Item/Slow.prefab.meta
+licenseType: Free
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
