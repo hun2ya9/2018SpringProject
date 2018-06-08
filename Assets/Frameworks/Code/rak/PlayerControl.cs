@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
 public class PlayerControl : MonoBehaviour
 {
     private class EndMapCheckerX
@@ -109,6 +108,8 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    public GUIText ScoreText;//코인의 개수 표시
+    public int CoinScore = 0;
     // 트리거 제어
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -116,6 +117,8 @@ public class PlayerControl : MonoBehaviour
         {
             print("코인 획득");
             col.gameObject.SetActive(false);
+            CoinScore = +1;
+            ScoreText.text = String.Format("{0}", CoinScore);
             /*var data*/
         }
         if (col.CompareTag("Item"))

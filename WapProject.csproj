@@ -317,7 +317,7 @@
     <Compile Include="Assets\Frameworks\Code\Hyerim\Mon\PlantAttackControl.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\Mon\WhiteBirdControl.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\PlayerAniController.cs" />
-    <Compile Include="Assets\Frameworks\Code\JungJin\AlphabetMove.cs" />
+    <Compile Include="Assets\Frameworks\Code\JungJin\FeverEvent.cs" />
     <Compile Include="Assets\Frameworks\Code\JungJin\NewBehaviourScript1.cs" />
     <Compile Include="Assets\Frameworks\Code\JungJin\Portal.cs" />
     <Compile Include="Assets\Frameworks\Code\JungJin\StageShow.cs" />
