@@ -106,9 +106,15 @@ public class PlayerControl : MonoBehaviour
             HitEffect.OnHitEffect();
             ani.Hit();
         }
+        if (col.gameObject.CompareTag("Spike"))
+        {
+            print("가시를 밟았다.");
+            var vector = transform.position - col.transform.position;
+            rigidBody.AddForce(vector * hitForce);
+            col.gameObject.GetComponent<SpikeControl>().SpikeTrapExecute();
+        }
     }
 
-    public GUIText ScoreText;//코인의 개수 표시
     public int CoinScore = 0;
     // 트리거 제어
     private void OnTriggerEnter2D(Collider2D col)
@@ -117,9 +123,7 @@ public class PlayerControl : MonoBehaviour
         {
             print("코인 획득");
             col.gameObject.SetActive(false);
-            CoinScore = +1;
-            ScoreText.text = String.Format("{0}", CoinScore);
-            /*var data*/
+            Coin.OnCollideCoin();
         }
         if (col.CompareTag("Item"))
         {
@@ -137,6 +141,12 @@ public class PlayerControl : MonoBehaviour
             print("FEVER");
             col.gameObject.SetActive(false);
             Fever.OnHitFever(col);
+        }
+
+        if (col.CompareTag("Spike"))
+        {
+            print("가시가 근처에 있다.");
+            col.GetComponent<SpikeControl>().SpikeTrapExecute();
         }
         
         if(col.CompareTag("EndMapX"))
