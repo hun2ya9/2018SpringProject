@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50238604559714714}
   - component: {fileID: 60777704543916126}
   m_Layer: 0
-  m_Name: brown platform merged transparent (2)
+  m_Name: Stage1Tail
   m_TagString: RopeAble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

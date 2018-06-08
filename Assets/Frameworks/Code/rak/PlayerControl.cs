@@ -115,11 +115,7 @@ public class PlayerControl : MonoBehaviour
             col.gameObject.GetComponent<SpikeControl>().SpikeTrapExecute();
         }
     }
-
-<<<<<<< HEAD
-    public Text ScoreText;//코인의 개수 표시
-=======
->>>>>>> b0b96dd1fd3cf1cb4e7198f4c2ce9e954c352fe2
+    
     public int CoinScore = 0;
     // 트리거 제어
     private void OnTriggerEnter2D(Collider2D col)

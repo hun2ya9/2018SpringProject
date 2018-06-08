@@ -307,6 +307,7 @@
     <Compile Include="Assets\Frameworks\Code\Effect\HitEffect.cs" />
     <Compile Include="Assets\Frameworks\Code\Effect\InvertEffect.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\AudioManager.cs" />
+    <Compile Include="Assets\Frameworks\Code\Hyerim\Coin.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\Fever.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\GameManager.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\ItemManager.cs" />
@@ -317,6 +318,7 @@
     <Compile Include="Assets\Frameworks\Code\Hyerim\Mon\PlantAttackControl.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\Mon\WhiteBirdControl.cs" />
     <Compile Include="Assets\Frameworks\Code\Hyerim\PlayerAniController.cs" />
+    <Compile Include="Assets\Frameworks\Code\Hyerim\SpikeControl.cs" />
     <Compile Include="Assets\Frameworks\Code\JungJin\FeverEvent.cs" />
     <Compile Include="Assets\Frameworks\Code\JungJin\MovePlatform.cs" />
     <Compile Include="Assets\Frameworks\Code\JungJin\NewBehaviourScript1.cs" />
