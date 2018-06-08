@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class PlayerControl : MonoBehaviour
@@ -108,7 +109,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    public GUIText ScoreText;//코인의 개수 표시
+    public Text ScoreText;//코인의 개수 표시
     public int CoinScore = 0;
     // 트리거 제어
     private void OnTriggerEnter2D(Collider2D col)
