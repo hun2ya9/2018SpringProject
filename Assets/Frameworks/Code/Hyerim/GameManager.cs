@@ -32,6 +32,13 @@ public class GameManager : MonoBehaviour
     [Space]
     [Header("Audio")]
     public AudioClip mainBGM;
+    public AudioClip ropeSound;
+    public AudioClip birdSound;
+    public AudioClip coinSound;
+    public AudioClip flySound;
+    public AudioClip hitSound;
+    public AudioClip landingSound;
+    public AudioClip potalSound;
 
     public List<GameObject> playerSkin = new List<GameObject>();
     

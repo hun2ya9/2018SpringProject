@@ -106,6 +106,7 @@ public class PlayerControl : MonoBehaviour
             rigidBody.AddForce(vector * hitForce);
             HitEffect.OnHitEffect();
             ani.Hit();
+            AudioManager.instance.PlaySingleEffect(GameManager.instance.hitSound);
         }
         if (col.gameObject.CompareTag("Spike"))
         {
@@ -113,6 +114,7 @@ public class PlayerControl : MonoBehaviour
             var vector = transform.position - col.transform.position;
             rigidBody.AddForce(vector * hitForce);
             col.gameObject.GetComponent<SpikeControl>().SpikeTrapExecute();
+            AudioManager.instance.PlaySingleEffect(GameManager.instance.hitSound);
         }
     }
     

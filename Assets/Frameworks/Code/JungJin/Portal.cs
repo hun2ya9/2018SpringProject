@@ -20,6 +20,8 @@ public class Portal : MonoBehaviour {
         {
             if(Input.GetKeyDown(KeyCode.UpArrow))
             {
+                AudioManager.instance.PlaySingleEffect(GameManager.instance.potalSound);
+
                 GameObject visitor = col.gameObject;
 
                 StartCoroutine(TelePort(visitor));

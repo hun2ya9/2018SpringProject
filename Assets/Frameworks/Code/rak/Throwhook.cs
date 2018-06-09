@@ -50,12 +50,14 @@ public class Throwhook : MonoBehaviour
 
             ropeActive = true;
             PlayerAniController.swingAni();
+            AudioManager.instance.PlaySingleEffect(GameManager.instance.ropeSound);
         }
         else
         {
             Destroy(curHook);
             ani.StateReset();
             ropeActive = false;
+          //  AudioManager.instance.PlaySingleEffect(GameManager.instance.flySound);
         }
     }
 

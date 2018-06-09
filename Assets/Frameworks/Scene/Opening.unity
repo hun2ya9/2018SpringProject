@@ -517,7 +517,7 @@ Prefab:
         type: 2}
       propertyPath: mainBGM
       value: 
-      objectReference: {fileID: 8300000, guid: ca52cc3b1f8bedb45a1977e56c4abee2, type: 3}
+      objectReference: {fileID: 8300000, guid: 4722a4268ead728419a3a1b4f9c468cd, type: 3}
     - target: {fileID: 114981874025604288, guid: bc9f84e960d5ca248a0b52aa8959c147,
         type: 2}
       propertyPath: playerPrefab
@@ -548,6 +548,41 @@ Prefab:
       value: 
       objectReference: {fileID: 1330031455656672, guid: 407a9f515cade934e91f194d7256cce1,
         type: 2}
+    - target: {fileID: 114981874025604288, guid: bc9f84e960d5ca248a0b52aa8959c147,
+        type: 2}
+      propertyPath: birdSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ec2e1f1f6ccf2764eacecfa70729e949, type: 3}
+    - target: {fileID: 114981874025604288, guid: bc9f84e960d5ca248a0b52aa8959c147,
+        type: 2}
+      propertyPath: coinSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6026465bdc35f4b40b34e9c51a949832, type: 3}
+    - target: {fileID: 114981874025604288, guid: bc9f84e960d5ca248a0b52aa8959c147,
+        type: 2}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7801cc52c28288841acc7841f156a549, type: 3}
+    - target: {fileID: 114981874025604288, guid: bc9f84e960d5ca248a0b52aa8959c147,
+        type: 2}
+      propertyPath: landingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d3e23b2be4dfeb438526ada4f675f28, type: 3}
+    - target: {fileID: 114981874025604288, guid: bc9f84e960d5ca248a0b52aa8959c147,
+        type: 2}
+      propertyPath: flySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 58cf719252092944cba84a0179e58252, type: 3}
+    - target: {fileID: 114981874025604288, guid: bc9f84e960d5ca248a0b52aa8959c147,
+        type: 2}
+      propertyPath: potalSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e683a9c09bc0c294faf2074f93b5c7d5, type: 3}
+    - target: {fileID: 114981874025604288, guid: bc9f84e960d5ca248a0b52aa8959c147,
+        type: 2}
+      propertyPath: ropeSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9c7809e0d8e36694db728c8f7bf62a29, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc9f84e960d5ca248a0b52aa8959c147, type: 2}
   m_IsPrefabParent: 0

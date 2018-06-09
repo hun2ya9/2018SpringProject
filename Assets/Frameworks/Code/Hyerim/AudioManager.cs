@@ -32,4 +32,9 @@ public class AudioManager : MonoBehaviour
         bgm.clip = clip;
         bgm.Play();
     }
+    public void PlaySingleEffect(AudioClip clip)
+    {
+        efx.clip = clip;
+        efx.Play();
+    }
 }

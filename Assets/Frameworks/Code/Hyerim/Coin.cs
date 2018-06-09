@@ -24,6 +24,7 @@ public class Coin : MonoBehaviour
         CreateCoin();
         Fever.OnFeverEffect += FeverCoinDropEffect;
         OnCollideCoin += GetCoin;
+        OnCollideCoin += () => AudioManager.instance.PlaySingleEffect(GameManager.instance.coinSound);
     }
 
     private void CreateCoin()
