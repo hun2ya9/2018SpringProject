@@ -337,6 +337,7 @@
     <Compile Include="Assets\Frameworks\Code\Table\ItemTable.cs" />
     <Compile Include="Assets\Frameworks\Code\Table\PlayerStateTable.cs" />
     <Compile Include="Assets\Frameworks\Code\UI\AudioVolumeContol.cs" />
+    <Compile Include="Assets\Frameworks\Code\UI\EndingCredit.cs" />
     <Compile Include="Assets\Frameworks\Code\UI\SettingWindow.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Attributes\MinAttribute.cs" />

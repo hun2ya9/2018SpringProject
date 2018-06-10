@@ -97,7 +97,13 @@ public class GameManager : MonoBehaviour
 
     public void GameClear()
     {
+        GameObject.Find("EndingCredit").SetActive(true);
+    }
 
+    public void ExitGame()
+    {
+        PlayerPrefs.SetInt("Money", money);
+        Application.Quit();
     }
 
     public void LoadScene(string sceneName)
