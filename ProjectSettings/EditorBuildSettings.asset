@@ -11,6 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Frameworks/Scene/Opening.unity
     guid: 7cdf5d04f2a9c774d80f84fc7cc00fd9
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Frameworks/Scene/shop.unity
+    guid: 90cc0af5cd5d89741bf5359dfc703978
