@@ -8,28 +8,21 @@ using UnityEngine.UI;
 public class Shop : MonoBehaviour
 {
     public Transform cube;
-
+    public Text errorText;
     public int cost;
-    public Action effect;
-
-    public Text costText;
-    public Button purchaseButton;
-
-    private void Start()
-    {
-    }
-
+    
     public void PurchaseSlime()
     {
         if (GameManager.instance.money >= cost)
         {
             GameManager.instance.money -= cost;
             print("슬라임 색깔 변경완료");
+            GameManager.instance.ChangePlayerSkin();
             //구매 버튼을 눌렀을 시 슬라임 색 변경 코드
         }
-        if (GameManager.instance.money < cost)
+        else
         {
-            print("돈이 부족합니다");
+            StartCoroutine(ShowErrorText());
         }
     }
 
@@ -39,12 +32,20 @@ public class Shop : MonoBehaviour
         {
             GameManager.instance.money -= cost;
             print("로프 색깔 변경완료");
+            GameManager.instance.ChangeRopeSkin();
             //구매 버튼을 눌렀을 시 로프 색 변경 코드
         }
-        if (GameManager.instance.money < cost)
+        else
         {
-            print("돈이 부족합니다");
+            StartCoroutine(ShowErrorText());
         }
+    }
+
+    private IEnumerator ShowErrorText()
+    {
+        errorText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1);
+        errorText.gameObject.SetActive(false);
     }
 
     // 게임 종료시에 호출되도록 수정바람

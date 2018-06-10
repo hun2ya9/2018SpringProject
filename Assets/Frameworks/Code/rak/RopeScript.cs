@@ -31,6 +31,8 @@ public class RopeScript : MonoBehaviour
 
         Nodes.Add(transform.gameObject);
         lr.sortingLayerName = "Object";
+        lr.startColor = GameManager.instance.lineStartColor;
+        lr.endColor = GameManager.instance.lineEndColor;
     }
 
     void Update()
