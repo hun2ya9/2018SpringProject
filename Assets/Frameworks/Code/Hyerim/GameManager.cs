@@ -52,10 +52,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SceneManager.activeSceneChanged += ChangedActiveScene;
-        money = PlayerPrefs.GetInt("Money", 0);
-        skinNumber = PlayerPrefs.GetInt("PlayerSkin", 0);
-        lineStartColor = new Color(PlayerPrefs.GetFloat("StartR", 0), PlayerPrefs.GetFloat("StartG", 0), PlayerPrefs.GetFloat("StartB", 0));
-        lineEndColor = new Color(PlayerPrefs.GetFloat("EndR", 0), PlayerPrefs.GetFloat("EndG", 0), PlayerPrefs.GetFloat("EndB", 0));
+        LoadData();
     }
 
     void Update()
@@ -66,7 +63,7 @@ public class GameManager : MonoBehaviour
     [Button(name: "플레이어 스킨변경")]
     public void ChangePlayerSkin()
     {
-        if (skinNumber < playerSkin.Count -1)
+        if (skinNumber < playerSkin.Count - 1)
         {
             playerPrefab = playerSkin[++skinNumber];
         }
@@ -86,6 +83,14 @@ public class GameManager : MonoBehaviour
         SaveData();
     }
 
+    private void LoadData()
+    {
+        money = PlayerPrefs.GetInt("Money", 0);
+        skinNumber = PlayerPrefs.GetInt("PlayerSkin", 0);
+        lineStartColor = new Color(PlayerPrefs.GetFloat("StartR", 0), PlayerPrefs.GetFloat("StartG", 0), PlayerPrefs.GetFloat("StartB", 0));
+        lineEndColor = new Color(PlayerPrefs.GetFloat("EndR", 0), PlayerPrefs.GetFloat("EndG", 0), PlayerPrefs.GetFloat("EndB", 0));
+    }
+
     private void SaveData()
     {
         PlayerPrefs.SetInt("Money", money);
@@ -97,6 +102,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("EndR", lineEndColor.r);
         PlayerPrefs.SetFloat("EndG", lineEndColor.g);
         PlayerPrefs.SetFloat("EndB", lineEndColor.b);
+        PlayerPrefs.Save();
     }
 
     //// Main 씬으로 전환하면 호출
@@ -112,7 +118,8 @@ public class GameManager : MonoBehaviour
         // 게임 -> 오프닝으로 되돌아가면 컴퓨터에 현재 돈 저장
         if (scene == "Opening")
         {
-            print("게임 종료. 현재 돈 저장");
+            playTime = 0;
+            print("게임 종료. 현재 돈 저장, 시간 초기화 ");
         }
         SaveData();
     }

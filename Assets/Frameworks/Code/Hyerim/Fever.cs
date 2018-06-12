@@ -34,7 +34,6 @@ public class Fever : MonoBehaviour
     }
     private void CreateFever()
     {
-        IListExtensions.Shuffle(feverSpawnPosition);
         for (int i = 0; i < feverPrefab.Count; i++)
         {
             var feverObject = Instantiate(feverPrefab[i], feverSpawnPosition[i].position, Quaternion.identity, feverSpawnContainer);

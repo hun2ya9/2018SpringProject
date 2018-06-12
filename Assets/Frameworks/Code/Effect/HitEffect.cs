@@ -10,7 +10,6 @@ public class HitEffect : MonoBehaviour
     private PostProcessingBehaviour postProcessing;
     private VignetteModel vignette;
     public float hitEffectTime;
-    private Color hitColor = new Color(0, 255, 255);
 
     public static Action OnHitEffect;
 
@@ -18,6 +17,7 @@ public class HitEffect : MonoBehaviour
     {
         postProcessing = Camera.main.GetComponent<PostProcessingBehaviour>();
         vignette = postProcessing.profile.vignette;
+        vignette.enabled = false;
         OnHitEffect += OnEffect;
     }
 
