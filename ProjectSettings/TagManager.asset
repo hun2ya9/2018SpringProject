@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Fever
+  - Item
+  - Coin
+  - Enemy
+  - RopeAble
+  - EndMapX
+  - EndMapY
+  - MovingLimit
+  - Bird
+  - Spike
+  - Detect
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Farest
+    uniqueID: 418799611
+    locked: 0
+  - name: Far
+    uniqueID: 3104303271
+    locked: 0
+  - name: Middle
+    uniqueID: 2316249109
+    locked: 0
+  - name: Near
+    uniqueID: 1971419585
+    locked: 0
+  - name: Nearest
+    uniqueID: 1086160807
+    locked: 0
+  - name: Object
+    uniqueID: 3144521481
+    locked: 0
+  - name: dd
+    uniqueID: 3716148127
+    locked: 0
