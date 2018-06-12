@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
 
     [Space]
     [Header("Audio")]
+    public AudioClip openingBGM;
+    public AudioClip shopBGM;
     public AudioClip mainBGM;
     public AudioClip ropeSound;
     public AudioClip birdSound;
@@ -53,6 +55,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.activeSceneChanged += ChangedActiveScene;
         LoadData();
+        playerPrefab = playerSkin[skinNumber];
     }
 
     void Update()
@@ -97,8 +100,8 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("PlayerSkin", skinNumber);
 
         PlayerPrefs.SetFloat("StartR", lineStartColor.r);
-        PlayerPrefs.SetFloat("StartG", lineStartColor.b);
-        PlayerPrefs.SetFloat("StartB", lineStartColor.g);
+        PlayerPrefs.SetFloat("StartG", lineStartColor.g);
+        PlayerPrefs.SetFloat("StartB", lineStartColor.b);
         PlayerPrefs.SetFloat("EndR", lineEndColor.r);
         PlayerPrefs.SetFloat("EndG", lineEndColor.g);
         PlayerPrefs.SetFloat("EndB", lineEndColor.b);
@@ -113,11 +116,18 @@ public class GameManager : MonoBehaviour
         if (scene == "Main")
         {
             AudioManager.instance.PlaySingle(mainBGM);
-            currentPlayer = Instantiate(playerPrefab, new Vector3(-6, -4, 0), Quaternion.identity, null);
+            currentPlayer = Instantiate(playerPrefab, new Vector3(-3, 0, 0), Quaternion.identity, null);
         }
         // 게임 -> 오프닝으로 되돌아가면 컴퓨터에 현재 돈 저장
         if (scene == "Opening")
         {
+            AudioManager.instance.PlaySingle(openingBGM);
+            playTime = 0;
+            print("게임 종료. 현재 돈 저장, 시간 초기화 ");
+        }
+        if (scene == "Shop")
+        {
+            AudioManager.instance.PlaySingle(shopBGM);
             playTime = 0;
             print("게임 종료. 현재 돈 저장, 시간 초기화 ");
         }

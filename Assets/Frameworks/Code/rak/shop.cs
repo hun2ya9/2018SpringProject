@@ -7,10 +7,55 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    public Transform cube;
     public Text errorText;
     public int cost;
-    
+
+    [Header("Model")]
+    private GameObject playerModel;
+    private GameObject hook;
+    private LineRenderer line;
+
+    private void Start()
+    {
+        ShowModel();
+    }
+
+    private void ShowModel()
+    {
+        if (hook != null)
+        {
+            hook.GetComponent<RopeScript>().enabled = false;
+            Destroy(hook);
+        }
+        if (playerModel != null)
+        {
+            Destroy(playerModel);
+        }
+
+        playerModel = Instantiate(GameManager.instance.playerPrefab, new Vector3(3.5f, 0, 0), Quaternion.identity, null);
+        playerModel.GetComponent<PlayerControl>().enabled = false;
+        playerModel.GetComponent<Throwhook>().enabled = false;
+        playerModel.transform.localScale = new Vector3(8, 8, 1);
+        hook = Instantiate(playerModel.GetComponent<Throwhook>().hook, new Vector3(3.5f, 2.6f, 0), Quaternion.identity, null);
+        print(hook.GetComponent<RopeScript>().player);
+        hook.GetComponent<RopeScript>().player = playerModel;
+        print(hook.GetComponent<RopeScript>().player);
+        Invoke("SetRopePlayer", 0.3f);
+    }
+    private void SetRopePlayer()
+    {
+        hook.GetComponent<RopeScript>().player = playerModel;
+    }
+    private void ShowRope()
+    {
+        line = hook.GetComponent<LineRenderer>();
+        if (line != null)
+        {
+            line.startColor = GameManager.instance.lineStartColor;
+            line.endColor = GameManager.instance.lineEndColor;
+        }
+    }
+
     public void PurchaseSlime()
     {
         if (GameManager.instance.money >= cost)
@@ -19,6 +64,7 @@ public class Shop : MonoBehaviour
             print("슬라임 색깔 변경완료");
             GameManager.instance.ChangePlayerSkin();
             //구매 버튼을 눌렀을 시 슬라임 색 변경 코드
+            ShowModel();
         }
         else
         {
@@ -33,6 +79,7 @@ public class Shop : MonoBehaviour
             GameManager.instance.money -= cost;
             print("로프 색깔 변경완료");
             GameManager.instance.ChangeRopeSkin();
+            ShowRope();
             //구매 버튼을 눌렀을 시 로프 색 변경 코드
         }
         else
@@ -52,17 +99,7 @@ public class Shop : MonoBehaviour
     void SaveStuff()
     {
         PlayerPrefs.SetInt("Money", GameManager.instance.money);
-        PlayerPrefs.SetFloat("CubePosX", cube.position.x);
-        PlayerPrefs.SetFloat("CubePosY", cube.position.y);
-        PlayerPrefs.SetFloat("CubePosZ", cube.position.z);
     }
-
-    void LoadStuff()
-    {
-        //GameManager.instance.money = PlayerPrefs.GetInt("Money");
-        cube.position = new Vector3(PlayerPrefs.GetFloat("CubePosX"), PlayerPrefs.GetFloat("CubePosY"), PlayerPrefs.GetFloat("CubePosZ"));
-    }
-
     void DeleteSaveData()
     {
         PlayerPrefs.DeleteAll();

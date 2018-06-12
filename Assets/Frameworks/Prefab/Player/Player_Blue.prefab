@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8cb03983e4eaf24281fba6a23d7671d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceToAdd: 5
+  forceToAdd: 7
   hitForce: 300
   ani: {fileID: 114208984181468206}
 --- !u!114 &114181938166780568
@@ -231,7 +231,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1334804821
+  randomSeed: 408590892
   InitialModule:
     serializedVersion: 3
     enabled: 1

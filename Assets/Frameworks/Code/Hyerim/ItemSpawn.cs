@@ -7,7 +7,7 @@ public class ItemSpawn : MonoBehaviour
     public List<Transform> ItemSpawnPosition = new List<Transform>();
     public List<GameObject> ItemPrefab = new List<GameObject>();
 
-    private void Awake()
+    private void Start()
     {
         CreateItem();
     }
@@ -18,6 +18,7 @@ public class ItemSpawn : MonoBehaviour
         {
             GameObject newItem = ItemPrefab[Random.Range(0,ItemPrefab.Count)];
             Instantiate(newItem, pos.transform.position, Quaternion.identity,itemSpawnContainer);
+            //pos.gameObject.SetActive(false);
         }
     }
 }

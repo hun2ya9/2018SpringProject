@@ -39,6 +39,7 @@ public class Throwhook : MonoBehaviour
         }
     #endif
     }
+    
     private void Throw()
     {
         if (ropeActive == false && !isBlockedRope)
@@ -46,6 +47,7 @@ public class Throwhook : MonoBehaviour
             Vector2 destiny = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             curHook = Instantiate(hook, transform.position, Quaternion.identity);
+
             curHook.GetComponent<RopeScript>().destiny = destiny;
 
             ropeActive = true;

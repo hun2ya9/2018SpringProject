@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System;
 using UnityEngine.UI;
 
 public class ClearWindow : MonoBehaviour
@@ -8,7 +8,9 @@ public class ClearWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        clearTIme.text = GameManager.instance.playTime.ToString();
+        var currentTime = GameManager.instance.playTime;
+        TimeSpan time = TimeSpan.FromSeconds(currentTime);
+        clearTIme.text = string.Format("{0:D2} : {1:D2} : {2:D2}", time.Hours, time.Minutes, time.Seconds);
     }
     private void OnDisable()
     {

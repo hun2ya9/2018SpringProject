@@ -34,32 +34,42 @@ public class RopeScript : MonoBehaviour
         lr.startColor = GameManager.instance.lineStartColor;
         lr.endColor = GameManager.instance.lineEndColor;
     }
+    public float ropeLimitDistance;
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, destiny, speed);
 
-        if ((Vector2)transform.position != destiny)
+        if (player != null)
         {
-            if (Vector2.Distance(player.transform.position, lastNode.transform.position) > distance)
-            {
-                CreateNode();
-            }
-        }
-        else if (done == false)
-        {
-            done = true;
+            var ropeDistance = Vector2.Distance(player.transform.position, transform.position);
 
-            while (Vector2.Distance(player.transform.position, lastNode.transform.position) > distance)
+            if (ropeDistance < ropeLimitDistance)
             {
-                CreateNode();
+                transform.position = Vector2.MoveTowards(transform.position, destiny, speed);
             }
 
-            lastNode.GetComponent<HingeJoint2D>().connectedBody = player.GetComponent<Rigidbody2D>();
-        }
+            if ((Vector2)transform.position != destiny)
+            {
+                if (Vector2.Distance(player.transform.position, lastNode.transform.position) > distance)
+                {
+                    CreateNode();
+                }
+            }
+            else if (done == false)
+            {
+                done = true;
 
-        RenderLine();
-        Invoke("CheckCol", speed);
+                while (Vector2.Distance(player.transform.position, lastNode.transform.position) > distance)
+                {
+                    CreateNode();
+                }
+
+                lastNode.GetComponent<HingeJoint2D>().connectedBody = player.GetComponent<Rigidbody2D>();
+            }
+
+            RenderLine();
+            Invoke("CheckCol", speed);
+        }
     }
     private void CheckCol()
     {

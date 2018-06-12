@@ -332,6 +332,7 @@
     <Compile Include="Assets\Frameworks\Code\Table\ItemTable.cs" />
     <Compile Include="Assets\Frameworks\Code\Table\PlayerStateTable.cs" />
     <Compile Include="Assets\Frameworks\Code\UI\AudioVolumeContol.cs" />
+    <Compile Include="Assets\Frameworks\Code\UI\EndingCredit.cs" />
     <Compile Include="Assets\Frameworks\Code\UI\SettingWindow.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
@@ -378,7 +379,6 @@
     <Compile Include="Assets\Import\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Import\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
-    <Compile Include="Assets\Shop.cs" />
     <Compile Include="Assets\StageChanger.cs" />
   </ItemGroup>
   <ItemGroup>

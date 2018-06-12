@@ -38,10 +38,10 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-       #if  UNITY_STANDALONE
+#if UNITY_STANDALONE
         if (Input.GetKey(KeyCode.A))
         {
-            
+
             GetComponent<Rigidbody2D>().AddForce(-Vector2.right * forceToAdd);
             ani.LeftMove();
         }
@@ -50,9 +50,9 @@ public class PlayerControl : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * forceToAdd);
             ani.RightMove();
         }
-        #endif
+#endif
 
-        #if (UNITY_IOS || UNITY_ANDROID)
+#if (UNITY_IOS || UNITY_ANDROID)
         if (Input.acceleration.x < 0)
         {
 
@@ -64,7 +64,7 @@ public class PlayerControl : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(Vector2.right * forceToAdd);
             ani.RightMove();
         }
-        #endif
+#endif
 
         if (rigidBody.velocity == Vector2.zero)
         {
@@ -78,22 +78,22 @@ public class PlayerControl : MonoBehaviour
     {
         if (endMapCheckerY.BlsEndOfMapY == false && endMapCheckerX.BIsEndOfMapX == false)
         {
-                Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
+            Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
         }
         else if (endMapCheckerY.BlsEndOfMapY == true || endMapCheckerX.BIsEndOfMapX == true)
         {
-            if(endMapCheckerY.BlsEndOfMapY == true && endMapCheckerX.BIsEndOfMapX == true)
+            if (endMapCheckerY.BlsEndOfMapY == true && endMapCheckerX.BIsEndOfMapX == true)
             {
                 Camera.main.transform.position = new Vector3(
-                                                    Camera.main.transform.position.x, 
-                                                    Camera.main.transform.position.y, 
+                                                    Camera.main.transform.position.x,
+                                                    Camera.main.transform.position.y,
                                                     Camera.main.transform.position.z);
             }
             else if (endMapCheckerY.BlsEndOfMapY == true)
                 Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, transform.position.y, Camera.main.transform.position.z);
             else
                 Camera.main.transform.position = new Vector3(transform.position.x, Camera.main.transform.position.y, Camera.main.transform.position.z);
-    }
+        }
 
 
     }
@@ -117,15 +117,13 @@ public class PlayerControl : MonoBehaviour
             AudioManager.instance.PlaySingleEffect(GameManager.instance.hitSound);
         }
     }
-    
-    public int CoinScore = 0;
     // 트리거 제어
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Coin"))
         {
             print("코인 획득");
-            col.gameObject.SetActive(false);
+            col.transform.parent.gameObject.SetActive(false);
             Coin.OnCollideCoin();
         }
         if (col.CompareTag("Item"))
@@ -134,10 +132,10 @@ public class PlayerControl : MonoBehaviour
             var data = ItemTable.GetData(col.name);
             if (data != null)
             {
-                col.gameObject.SetActive(false);
                 data.ItemAction(data.runTime);
                 GetItemEffect.OnItemEffect();
             }
+            col.gameObject.SetActive(false);
         }
         if (col.CompareTag("Fever"))
         {
@@ -151,8 +149,8 @@ public class PlayerControl : MonoBehaviour
             print("가시가 근처에 있다.");
             col.GetComponent<SpikeControl>().SpikeTrapExecute();
         }
-        
-        if(col.CompareTag("EndMapX"))
+
+        if (col.CompareTag("EndMapX"))
         {
             endMapCheckerX.BIsEndOfMapX = true;
         }

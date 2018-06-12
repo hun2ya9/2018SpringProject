@@ -14,6 +14,7 @@ TagManager:
   - MovingLimit
   - Bird
   - Spike
+  - Detect
   layers:
   - Default
   - TransparentFX

@@ -19,13 +19,11 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(this);
-        PlaySingle(openingBGM);
     }
 
     [Header("Audio")]
     public AudioSource bgm;
     public AudioSource efx;
-    public AudioClip openingBGM;
 
     public void PlaySingle(AudioClip clip)
     {

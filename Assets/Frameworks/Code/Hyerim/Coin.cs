@@ -26,6 +26,10 @@ public class Coin : MonoBehaviour
         OnCollideCoin += GetCoin;
         OnCollideCoin += () => AudioManager.instance.PlaySingleEffect(GameManager.instance.coinSound);
     }
+    private void Start()
+    {
+        this.coinUIsprite.text = GameManager.instance.money.ToString();
+    }
 
     private void CreateCoin()
     {
@@ -59,6 +63,6 @@ public class Coin : MonoBehaviour
     public void GetCoin()
     {
         GameManager.instance.money += 1;
-        coinUIsprite.text = GameManager.instance.money.ToString();
+        this.coinUIsprite.text = GameManager.instance.money.ToString();
     }
 }

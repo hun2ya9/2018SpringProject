@@ -4,20 +4,24 @@ using System.Collections.Generic;
 
 public class ItemManager : MonoBehaviour
 {
-    public static ItemManager instance = new ItemManager();
+    //public static ItemManager instance = new ItemManager();
 
-    private void Awake()
+    //private void Awake()
+    //{
+    //    if (instance == null)
+    //    {
+    //        instance = this;
+    //    }
+    //    else
+    //    {
+    //        Destroy(this);
+    //        Destroy(gameObject);
+    //    }
+    //    DontDestroyOnLoad(this);
+    //}
+
+    private void Start()
     {
-        if (instance == null)
-        {
-            instance = new ItemManager();
-        }
-        else
-        {
-            Destroy(this);
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(this);
         ItemSetting();
     }
     private void ItemSetting()
