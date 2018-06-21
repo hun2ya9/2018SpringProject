@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
+    public Text currentCoinText;
     public Text errorText;
     public int cost;
 
@@ -18,6 +19,10 @@ public class Shop : MonoBehaviour
     private void Start()
     {
         ShowModel();
+    }
+    private void ShowCurCoin()
+    {
+        currentCoinText.text = GameManager.instance.money.ToString();
     }
 
     private void ShowModel()
@@ -37,10 +42,9 @@ public class Shop : MonoBehaviour
         playerModel.GetComponent<Throwhook>().enabled = false;
         playerModel.transform.localScale = new Vector3(8, 8, 1);
         hook = Instantiate(playerModel.GetComponent<Throwhook>().hook, new Vector3(3.5f, 2.6f, 0), Quaternion.identity, null);
-        print(hook.GetComponent<RopeScript>().player);
         hook.GetComponent<RopeScript>().player = playerModel;
-        print(hook.GetComponent<RopeScript>().player);
         Invoke("SetRopePlayer", 0.3f);
+        ShowCurCoin();
     }
     private void SetRopePlayer()
     {
@@ -53,6 +57,7 @@ public class Shop : MonoBehaviour
         {
             line.startColor = GameManager.instance.lineStartColor;
             line.endColor = GameManager.instance.lineEndColor;
+            ShowCurCoin();
         }
     }
 

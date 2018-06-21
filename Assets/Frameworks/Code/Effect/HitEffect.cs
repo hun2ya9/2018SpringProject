@@ -18,7 +18,7 @@ public class HitEffect : MonoBehaviour
         postProcessing = Camera.main.GetComponent<PostProcessingBehaviour>();
         vignette = postProcessing.profile.vignette;
         vignette.enabled = false;
-        OnHitEffect += OnEffect;
+        OnHitEffect = OnEffect;
     }
 
     public void OnEffect()

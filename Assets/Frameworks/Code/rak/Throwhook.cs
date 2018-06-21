@@ -67,7 +67,7 @@ public class Throwhook : MonoBehaviour
     public void CancelRope()
     {
         isBlockedRope = true;
-        if (gameObject != null)
+        if (this != null)
         {
             Invoke("UnBlockRope", ropeBlockTime);
         }

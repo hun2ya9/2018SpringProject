@@ -19,7 +19,7 @@ public class GetItemEffect : MonoBehaviour
         {
             Debug.Log("플레이어를 찾지 못함");
         }
-        OnItemEffect += ItemEffect;
+        OnItemEffect = ItemEffect;
     }
     private void ItemEffect()
     {

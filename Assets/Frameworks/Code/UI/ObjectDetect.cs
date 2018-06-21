@@ -26,7 +26,7 @@ public class ObjectDetect : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Detect"))
         {
-            col.transform.GetChild(0).gameObject.SetActive(true);
+            col.transform.parent.GetChild(0).gameObject.SetActive(true);
             //for (int i = 0; i < col.transform.childCount; i++)
             //{
             //    col.transform.GetChild(i).gameObject.SetActive(true);
@@ -38,7 +38,7 @@ public class ObjectDetect : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Detect"))
         {
-            col.transform.GetChild(0).gameObject.SetActive(false);
+            col.transform.parent.GetChild(0).gameObject.SetActive(false);
         }
     }
 }

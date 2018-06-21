@@ -27,9 +27,9 @@ public class ItemManager : MonoBehaviour
     private void ItemSetting()
     {
         var ids = ItemTable.GetIds();
-        ItemTable.GetData(ids[0]).ItemAction += BigItem;
-        ItemTable.GetData(ids[1]).ItemAction += FastItem;
-        ItemTable.GetData(ids[2]).ItemAction += SlowItem;
+        ItemTable.GetData(ids[0]).ItemAction = BigItem;
+        ItemTable.GetData(ids[1]).ItemAction = FastItem;
+        ItemTable.GetData(ids[2]).ItemAction = SlowItem;
     }
 
     //  public bool isUsingItem = false;

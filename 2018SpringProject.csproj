@@ -339,6 +339,7 @@
     <Compile Include="Assets\Frameworks\Code\UI\AudioVolumeContol.cs" />
     <Compile Include="Assets\Frameworks\Code\UI\ClearWindow.cs" />
     <Compile Include="Assets\Frameworks\Code\UI\EndingCredit.cs" />
+    <Compile Include="Assets\Frameworks\Code\UI\MonsterDetectControl.cs" />
     <Compile Include="Assets\Frameworks\Code\UI\ObjectDetect.cs" />
     <Compile Include="Assets\Frameworks\Code\UI\SettingWindow.cs" />
     <Compile Include="Assets\Import\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />

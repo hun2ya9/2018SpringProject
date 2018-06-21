@@ -764,6 +764,11 @@ Prefab:
       propertyPath: shopBGM
       value: 
       objectReference: {fileID: 8300000, guid: ca52cc3b1f8bedb45a1977e56c4abee2, type: 3}
+    - target: {fileID: 114981874025604288, guid: bc9f84e960d5ca248a0b52aa8959c147,
+        type: 2}
+      propertyPath: currentPlayer
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc9f84e960d5ca248a0b52aa8959c147, type: 2}
   m_IsPrefabParent: 0
@@ -795,7 +800,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgm: {fileID: 492666081}
   efx: {fileID: 492666080}
-  openingBGM: {fileID: 8300000, guid: 40bbb41ab51af244f8018db55cc1485c, type: 3}
 --- !u!1 &612263176
 GameObject:
   m_ObjectHideFlags: 0

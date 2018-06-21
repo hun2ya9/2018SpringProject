@@ -33,7 +33,7 @@ public class PlayerControl : MonoBehaviour
     {
         rigidBody = transform.GetComponent<Rigidbody2D>();
         GetComponent<Rigidbody2D>().velocity = Vector2.up * 10;
-        Big += BigItemEffect;
+        Big = BigItemEffect;
     }
 
     void Update()

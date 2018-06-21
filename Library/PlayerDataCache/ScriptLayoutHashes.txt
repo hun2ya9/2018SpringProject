@@ -1,7 +1,7 @@
-Android
+WindowsStandalone
 SceneListBegin?
 Assets/Frameworks/Scene/Opening.unity
-Assets/Frameworks/Scene/Shop.unity
+Assets/Frameworks/Scene/shop.unity
 Assets/Frameworks/Scene/Main.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -178,7 +178,8 @@ a8ed45ab553b07236625df6cc6ac449c Sirenix.OdinInspector.Editor.dll:Sirenix.OdinIn
 05524b8f659e7bfe5756d1335fec24ba Sirenix.OdinInspector.Editor.dll:Sirenix.OdinInspector.Editor.PersistentContextCacheEditor
 0b60b8679720ae1c5e80a6539331331b Sirenix.OdinInspector.Editor.dll:Sirenix.OdinInspector.Editor.SirenixPreferencesWindow
 6613b3abeebbcf32a379fec1cb789189 Assembly-CSharp.dll:.Coin
-6db8a8e4ed562742b2d0a59a188cfdff Assembly-CSharp.dll:.AudioManager
+8afcb11964bc2016f6fc020e115b8cf3 Assembly-CSharp.dll:.MonsterDetectControl
+1ae6de61d5fa240859de1dea3566b2fd Assembly-CSharp.dll:.AudioManager
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 96d0fbde9fd209878a0a291f82c9bcdd UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
@@ -196,7 +197,7 @@ f671a42aea5f34fec6a4450a3668c615 Assembly-CSharp.dll:UnityEngine.PostProcessing.
 cc8f31e82b02d7648aefdbfe84c58f8d Assembly-CSharp.dll:.ItemTable
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ItemManager
-a6c0cde47f10a6c73e62c6dde548a70a Assembly-CSharp.dll:.Shop
+2055daa0c67dabf2f995a311bb5c44cb Assembly-CSharp.dll:.Shop
 bcaf10bd4e1b2c4952d732b8504052ba Assembly-CSharp.dll:.StageShow
 20289964844e8d7869b67c5b32637ec4 Assembly-CSharp.dll:.Throwhook
 3c81b6b66c9a1c9a663d663d6b858bb8 Assembly-CSharp.dll:.EndingCredit

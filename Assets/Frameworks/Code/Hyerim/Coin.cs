@@ -19,15 +19,12 @@ public class Coin : MonoBehaviour
     // 코인과 충돌시 호출되도록
     public static Action OnCollideCoin;
 
-    private void Awake()
-    {
-        CreateCoin();
-        Fever.OnFeverEffect += FeverCoinDropEffect;
-        OnCollideCoin += GetCoin;
-        OnCollideCoin += () => AudioManager.instance.PlaySingleEffect(GameManager.instance.coinSound);
-    }
     private void Start()
     {
+        CreateCoin();
+        Fever.OnFeverEffect = FeverCoinDropEffect;
+        OnCollideCoin = GetCoin;
+        OnCollideCoin += () => AudioManager.instance.PlaySingleEffect(GameManager.instance.coinSound);
         this.coinUIsprite.text = GameManager.instance.money.ToString();
     }
 

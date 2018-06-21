@@ -30,7 +30,7 @@ public class Fever : MonoBehaviour
     {
         hasFever = new bool[feverUIsprite.Count];
         CreateFever();
-        OnHitFever += FeverCheck;
+        OnHitFever = FeverCheck;
     }
     private void CreateFever()
     {
