@@ -699,7 +699,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 0
 --- !u!222 &467987011
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1596,7 +1596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCoinText: {fileID: 385431540}
   errorText: {fileID: 169120921}
-  cost: 100
+  cost: 0
 --- !u!4 &1397637823
 Transform:
   m_ObjectHideFlags: 0
@@ -1760,7 +1760,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 0
 --- !u!222 &1569923942
 CanvasRenderer:
   m_ObjectHideFlags: 0
